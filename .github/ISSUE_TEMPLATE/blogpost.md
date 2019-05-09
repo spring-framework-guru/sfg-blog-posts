@@ -1,7 +1,7 @@
 ---
 name: BlogPost
 about: Blog Post Description
-title: "[POST]"
+title: "[POST] - "
 labels: Blog Post
 assignees: ''
 
