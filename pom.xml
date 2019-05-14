@@ -53,5 +53,6 @@
 
     <modules>
         <module>example-post</module>
+        <module>spring-factory-method</module>
     </modules>
 </project>
