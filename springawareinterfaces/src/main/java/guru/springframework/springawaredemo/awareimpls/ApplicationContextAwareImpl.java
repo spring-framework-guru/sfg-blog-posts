@@ -9,7 +9,7 @@ public class ApplicationContextAwareImpl implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-User user =(User)applicationContext.getBean("user");
-        System.out.println("User Id: " +user.getUserId()+"  User Name :"+user.getName());
+        User user = (User) applicationContext.getBean("user");
+        System.out.println("User Id: " + user.getUserId() + "  User Name :" + user.getName());
     }
 }

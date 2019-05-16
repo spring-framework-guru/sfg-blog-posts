@@ -6,7 +6,6 @@ import org.springframework.beans.factory.BeanFactoryAware;
 
 public class BeanFactoryAwareImpl implements BeanFactoryAware {
 
-
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println(beanFactory.getBean("user"));
