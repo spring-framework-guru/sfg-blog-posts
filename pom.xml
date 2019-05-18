@@ -53,5 +53,6 @@
 
     <modules>
         <module>example-post</module>
+        <module>jdbc-template</module>
     </modules>
 </project>
