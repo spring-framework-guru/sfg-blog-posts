@@ -26,7 +26,7 @@
 
     <packaging>pom</packaging>
 
-    <description>Parent Project for SFG Brewery</description>
+    <description>Parent Project for SFG </description>
 
     <licenses>
         <license>
@@ -53,5 +53,6 @@
 
     <modules>
         <module>example-post</module>
+        <module>springawareinterfaces</module>
     </modules>
 </project>
