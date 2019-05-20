@@ -1,16 +1,8 @@
 package guru.springframework.springfactorymethod.avengers.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.Value;
 
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@ToString
+@Value
 public class Avenger {
 
   private String name;
