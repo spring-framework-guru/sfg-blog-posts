@@ -23,6 +23,11 @@ public class EmployeeRepository {
     this.jdbcTemplate = jdbcTemplate;
   }
 
+  /**
+   * Checks if an employee for the given id exists in the database.
+   * @param id the id of the employee to be checked
+   * @return {@code true} if the employee exists, {@code false} otherwise
+   */
   public boolean exists(long id) {
     String sqlQuery = "select count(*) from employees where id = ?";
 
@@ -32,6 +37,12 @@ public class EmployeeRepository {
     return result == 1;
   }
 
+
+  /**
+   * Returns the employee for the given id.
+   * @param id the id of the employee to be queried
+   * @return the employee matching the id or {@code null} if no employee is found
+   */
   public Employee findOne(long id) {
     String sqlQuery = "select id, first_name, last_name, yearly_income " +
                       "from employees where id = ?";
@@ -39,12 +50,20 @@ public class EmployeeRepository {
     return jdbcTemplate.queryForObject(sqlQuery, this::mapRowToEmployee, id);
   }
 
+  /**
+   * Returns a list of all employees that exist in the database.
+   * @return a list of all employees
+   */
   public List<Employee> findAll() {
     String sqlQuery = "select id, first_name, last_name, yearly_income from employees";
 
     return jdbcTemplate.query(sqlQuery, this::mapRowToEmployee);
   }
 
+  /**
+   * Creates the employee in the database.
+   * @param employee the employee to be created
+   */
   public void save(Employee employee) {
     String sqlQuery = "insert into employees(first_name, last_name, yearly_income) " +
                       "values (?, ?, ?)";
@@ -52,6 +71,11 @@ public class EmployeeRepository {
     jdbcTemplate.update(sqlQuery, employee.getFirstName(), employee.getLastName(), employee.getYearlyIncome());
   }
 
+  /**
+   * Creates the employee in the database and returns the id of the created employee.
+   * @param employee the employee to be created
+   * @return the id of the created employee.
+   */
   public long saveAndReturnId(Employee employee) {
     String sqlQuery = "insert into employees(first_name, last_name, yearly_income) " +
                       "values (?, ?, ?)";
@@ -69,6 +93,13 @@ public class EmployeeRepository {
     return keyHolder.getKey().longValue();
   }
 
+
+  /**
+   * Creates the employee in the database and returns the id of the created employee.
+   * The method uses SimpleJdbcInsert instead of JdbcTemplate.
+   * @param employee the employee to be created
+   * @return the id of the created employee
+   */
   public long simpleSave(Employee employee) {
     SimpleJdbcInsert simpleJdbcInsert = new SimpleJdbcInsert(jdbcTemplate)
             .withTableName("employees")
@@ -77,6 +108,10 @@ public class EmployeeRepository {
     return simpleJdbcInsert.executeAndReturnKey(employee.toMap()).longValue();
   }
 
+  /**
+   * Updates the employee in the database. The given employee must have a valid id.
+   * @param employee the employee to be updated
+   */
   public void update(Employee employee) {
     String sqlQuery = "update employees set " +
                       "first_name = ?, last_name = ?, yearly_income = ? " +
@@ -89,6 +124,11 @@ public class EmployeeRepository {
                       , employee.getId());
   }
 
+  /**
+   * Deletes the employee for the given id.
+   * @param id the id of the employee to be deleted
+   * @return {@code true} if the employee could be deleted successfully, {@code false} otherwise
+   */
   public boolean delete(long id) {
     String sqlQuery = "delete from employees where id = ?";
 
