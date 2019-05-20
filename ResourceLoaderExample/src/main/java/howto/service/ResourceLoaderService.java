@@ -16,7 +16,11 @@ public class ResourceLoaderService implements ResourceLoaderAware {
 		this.resourceLoader = resourceLoader;
 	}
 
-	// This method reads the resource from file path
+	/*
+	 * This method reads the resource from root path. The method getResource()
+	 * accepts string value. In "file:pom.xml" no path is given so it considers the
+	 * root as path.
+	 */
 	public void showResourceDataUsingRoot() throws IOException {
 		Resource resource = resourceLoader.getResource("file:pom.xml");
 
@@ -33,7 +37,11 @@ public class ResourceLoaderService implements ResourceLoaderAware {
 		reader.close();
 	}
 
-	// This method reads the resource from file path
+	/*
+	 * This method reads the resource from file path. As we have given the absolute
+	 * path the ResourceLoader loads the file from that location. Please make sure
+	 * that you have "test.txt" file in your "d:" Local Disk.
+	 */
 	public void showResourceDataUsingFilePath() throws IOException {
 		Resource resource = resourceLoader.getResource("file:d:/test.txt");
 
@@ -50,7 +58,11 @@ public class ResourceLoaderService implements ResourceLoaderAware {
 		reader.close();
 	}
 
-	// This method reads the resource from class path
+	/*
+	 * This method reads the resource from class path. Using "classpath"
+	 * ResourceLoader loads the file from the thread context having resources
+	 * folder.
+	 */
 	public void showResourceDataUsingClassPath() throws IOException {
 		Resource resource = resourceLoader.getResource("classpath:test.txt");
 
@@ -67,7 +79,10 @@ public class ResourceLoaderService implements ResourceLoaderAware {
 		reader.close();
 	}
 
-	// This method reads the resource from URL
+	/*
+	 * This method reads the resource from URL. ResourceLoader loads file via URL such
+	 * as file, an HTTP target, an FTP target, etc.
+	 */
 	public void showResourceDataUsingURL() throws IOException {
 		Resource resource = resourceLoader.getResource("https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha1.js");
 
