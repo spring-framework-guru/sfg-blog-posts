@@ -17,31 +17,21 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class DefaultAvengersService implements AvengersService {
 
-  private ContentType.Parser csvParser, jsonParser, xmlParser;
+  private ContentType.ParserFactory parserFactory;
 
   @Autowired
   public DefaultAvengersService(ContentType.ParserFactory parserFactory) {
-    this.csvParser = parserFactory.getParser(ContentType.CSV);
-    this.jsonParser = parserFactory.getParser(ContentType.JSON);
-    this.xmlParser = parserFactory.getParser(ContentType.XML);
+    this.parserFactory = parserFactory;
   }
 
   @Override
-  public List<Avenger> getAllFromCsv() {
-    log.info("Fetching list from avengers.csv...");
-    return csvParser.parse(getFileHandle("avengers.csv"));
-  }
+  public List<Avenger> getAll(ContentType contentType) {
+    String fileName = contentType.fileName();
+    log.info("Fetching list from file {}", fileName);
 
-  @Override
-  public List<Avenger> getAllFromJson() {
-    log.info("Fetching list from avengers.json...");
-    return jsonParser.parse(getFileHandle("avengers.json"));
-  }
-
-  @Override
-  public List<Avenger> getAllFromXml() {
-    log.info("Fetching list from avengers.xml...");
-    return xmlParser.parse(getFileHandle("avengers.xml"));
+    return parserFactory
+        .getParser(contentType)
+        .parse(getFileHandle(fileName));
   }
 
   private Reader getFileHandle(String fileName) {

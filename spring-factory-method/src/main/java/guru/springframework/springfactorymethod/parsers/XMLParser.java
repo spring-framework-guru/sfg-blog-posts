@@ -28,7 +28,7 @@ public class XMLParser implements ContentType.Parser {
       });
 
     } catch (IOException e) {
-      throw new ParserIOException("Io error while parsing CSV file", e);
+      throw new ParserIOException("Io error while parsing XML file", e);
     }
   }
 
@@ -39,7 +39,7 @@ public class XMLParser implements ContentType.Parser {
       });
 
     } catch (IOException e) {
-      throw new ParserIOException("Io error while parsing CSV file", e);
+      throw new ParserIOException("Io error while parsing XML file", e);
     }
   }
 }

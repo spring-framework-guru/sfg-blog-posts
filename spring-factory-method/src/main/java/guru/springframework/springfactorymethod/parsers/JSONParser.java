@@ -28,7 +28,7 @@ public class JSONParser implements ContentType.Parser {
       });
 
     } catch (IOException e) {
-      throw new ParserIOException("Io error while parsing CSV file", e);
+      throw new ParserIOException("Io error while parsing JSON file", e);
     }
   }
 
@@ -39,7 +39,7 @@ public class JSONParser implements ContentType.Parser {
       });
 
     } catch (IOException e) {
-      throw new ParserIOException("Io error while parsing CSV file", e);
+      throw new ParserIOException("Io error while parsing JSON file", e);
     }
   }
 }

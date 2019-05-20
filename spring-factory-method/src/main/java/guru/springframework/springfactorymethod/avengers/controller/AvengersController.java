@@ -2,6 +2,7 @@ package guru.springframework.springfactorymethod.avengers.controller;
 
 import guru.springframework.springfactorymethod.avengers.domain.Avenger;
 import guru.springframework.springfactorymethod.avengers.service.AvengersService;
+import guru.springframework.springfactorymethod.parsers.ContentType;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -23,16 +24,16 @@ public class AvengersController {
 
   @GetMapping("/csv")
   public ResponseEntity<List<Avenger>> getAllFromCsv() {
-    return ResponseEntity.ok().body(service.getAllFromCsv());
+    return ResponseEntity.ok().body(service.getAll(ContentType.CSV));
   }
 
   @GetMapping("/json")
   public ResponseEntity<List<Avenger>> getAllFromJson() {
-    return ResponseEntity.ok().body(service.getAllFromJson());
+    return ResponseEntity.ok().body(service.getAll(ContentType.JSON));
   }
 
   @GetMapping("/xml")
   public ResponseEntity<List<Avenger>> getAllFromXml() {
-    return ResponseEntity.ok().body(service.getAllFromXml());
+    return ResponseEntity.ok().body(service.getAll(ContentType.XML));
   }
 }
