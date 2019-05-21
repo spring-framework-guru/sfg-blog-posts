@@ -26,7 +26,7 @@
 
     <packaging>pom</packaging>
 
-    <description>Parent Project for SFG Brewery</description>
+    <description>Parent Project for SFG </description>
 
     <licenses>
         <license>
@@ -53,6 +53,9 @@
 
     <modules>
         <module>example-post</module>
+        <module>springawareinterfaces</module>
+        <module>springboot-graphql-app</module>
+        <module>jdbc-template</module>
         <module>spring-factory-method</module>
     </modules>
 </project>
