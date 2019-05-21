@@ -56,6 +56,6 @@
         <module>springawareinterfaces</module>
         <module>springboot-graphql-app</module>
         <module>jdbc-template</module>
-
+        <module>spring-factory-method</module>
     </modules>
 </project>
