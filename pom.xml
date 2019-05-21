@@ -55,5 +55,7 @@
         <module>example-post</module>
         <module>springawareinterfaces</module>
         <module>springboot-graphql-app</module>
+        <module>jdbc-template</module>
+
     </modules>
 </project>
