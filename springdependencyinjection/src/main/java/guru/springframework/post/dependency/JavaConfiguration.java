@@ -1,21 +1,26 @@
-package com.blog.post.dependencyInjection;
+package guru.springframework.post.dependency;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan
+@ComponentScan("guru")
 public class JavaConfiguration {
-    @Bean(name = "newName")
+    @Bean
     public MyFirstBean myFirstBean (){
         return new MyFirstBean();
 
     }
+    @Bean(value = "otherName")
+    public MyFirstBean mySecondBean (){
+        return new MyFirstBean();
+
+    }
     @Bean
-    public BeanWithDependency beanWithDependency(){
+    public BeanWithDependency beanWithDependency(MyFirstBean myFirstBean){
         BeanWithDependency beanWithDependency= new BeanWithDependency();
-        beanWithDependency.setMyFirstBean(myFirstBean());
+        beanWithDependency.setMyFirstBean(myFirstBean);
         return beanWithDependency;
     }
 

@@ -1,4 +1,4 @@
-package com.blog.post.dependencyInjection;
+package guru.springframework.post.dependency;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
