@@ -55,6 +55,7 @@
         <module>example-post</module>
         <module>springawareinterfaces</module>
         <module>springboot-graphql-app</module>
+        <module>springdependencyinjection</module>
         <module>jdbc-template</module>
         <module>spring-factory-method</module>
         <module>resttemplate/resttemplate-apache-httpcomponents</module>
