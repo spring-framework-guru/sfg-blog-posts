@@ -57,5 +57,7 @@
         <module>springboot-graphql-app</module>
         <module>jdbc-template</module>
         <module>spring-factory-method</module>
+        <module>resttemplate/resttemplate-apache-httpcomponents</module>
+        <module>resttemplate/resttemplate-usage</module>
     </modules>
 </project>

@@ -1,3 +1,3 @@
-# JDBC Template
+# JdbcTemplate
 
-Example project for blog post about using JDBC Template for CRUD operations.
+Example project for blog post about using JdbcTemplate for CRUD operations.
