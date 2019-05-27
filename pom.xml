@@ -60,5 +60,6 @@
         <module>jdbc-template</module>
         <module>spring-factory-method</module>
         <module>multiple-data-sources</module>
+        <module>multiple-data-sources</module>
     </modules>
 </project>
