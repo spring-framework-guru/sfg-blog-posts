@@ -1,4 +1,4 @@
-package guru.springframework.resourceloaderdemo.service;
+package main.java.guru.springframework.resourceloaderdemo.service;
 
 import java.io.BufferedReader;
 import java.io.IOException;

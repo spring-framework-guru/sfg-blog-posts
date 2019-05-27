@@ -1,10 +1,10 @@
-package guru.springframework.resoruceloaderdemo;
+package main.java.guru.springframework.resourceloaderdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import guru.springframework.resourceloaderdemo.service.ResourceLoaderService;
+import main.java.guru.springframework.resourceloaderdemo.service.ResourceLoaderService;
 
 @SpringBootApplication
 public class ResoruceloaderdemoApplication {
