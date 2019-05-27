@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>guru.springframework</groupId>
-    <artifactId>resttemplate-usage</artifactId>
+    <artifactId>resttemplate</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>resttemplate-usage</name>
+    <name>resttemplate</name>
     <description>Example project for blog post about using RestTemplate for consuming a REST Web-Service.</description>
 
     <properties>
@@ -24,6 +24,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
         </dependency>
 
         <!-- For unit test -->

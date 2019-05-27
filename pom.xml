@@ -58,7 +58,6 @@
         <module>springdependencyinjection</module>
         <module>jdbc-template</module>
         <module>spring-factory-method</module>
-        <module>resttemplate/resttemplate-apache-httpcomponents</module>
-        <module>resttemplate/resttemplate-usage</module>
+        <module>resttemplate</module>
     </modules>
 </project>

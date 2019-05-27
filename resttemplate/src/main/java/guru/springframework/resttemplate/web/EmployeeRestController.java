@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
+/**
+ * Very simple REST Web-Service to manage employees and demonstrate the usage of class RestTemplate.
+ * Please see class EmployeeRestControllerIntegrationTest to see RestTemplate in action.
+ */
 @RestController
 @RequestMapping("/rest/employees")
 public class EmployeeRestController {
@@ -17,16 +21,12 @@ public class EmployeeRestController {
 
   static {
     employees = new HashMap<>();
-    employees.put(nextID++, Employee.builder().id(1).firstName("John").lastName("Doe").yearlyIncome(80000).build());
-    employees.put(nextID++, Employee.builder().id(1).firstName("Mary").lastName("Jackson").yearlyIncome(75000).build());
-    employees.put(nextID++, Employee.builder().id(1).firstName("Peter").lastName("Grey").yearlyIncome(60000).build());
-    employees.put(nextID++, Employee.builder().id(1).firstName("Max").lastName("Simpson").yearlyIncome(67000).build());
-    employees.put(nextID++, Employee.builder().id(1).firstName("Lisa").lastName("O'Melly").yearlyIncome(45000).build());
-    employees.put(nextID++, Employee.builder().id(1).firstName("Josephine").lastName("Rose").yearlyIncome(52000).build());
-  }
-
-  public EmployeeRestController() {
-
+    employees.put(nextID, new Employee(nextID++, "John", "Doe", 80000));
+    employees.put(nextID, new Employee(nextID++, "Mary", "Jackson", 75000));
+    employees.put(nextID, new Employee(nextID++, "Peter", "Grey", 60000));
+    employees.put(nextID, new Employee(nextID++, "Max", "Simpson", 67000));
+    employees.put(nextID, new Employee(nextID++, "Lisa", "O'Melly", 45000));
+    employees.put(nextID, new Employee(nextID++, "Josephine", "Rose", 52000));
   }
 
   @GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -38,7 +38,7 @@ public class EmployeeRestController {
 
   @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<Collection<Employee>> getAll(@RequestParam(name = "page", defaultValue = "1") int page,
-                                                     @RequestParam(name = "pageSize", defaultValue = "3") int pageSize) {
+                                                     @RequestParam(name = "pageSize", defaultValue = "10") int pageSize) {
     List<Employee> employeesSubList = calculateEmployeeSubList(page, pageSize);
     return ResponseEntity.ok(employeesSubList);
   }
@@ -48,7 +48,10 @@ public class EmployeeRestController {
   public ResponseEntity<Employee> create(@RequestBody Employee newEmployee) {
     newEmployee.setId(nextID++);
     employees.put(newEmployee.getId(), newEmployee);
-    return ResponseEntity.status(HttpStatus.CREATED).body(newEmployee);
+
+    return ResponseEntity.status(HttpStatus.CREATED)
+            .header("Location", "/rest/employees/" + newEmployee.getId())
+            .body(newEmployee);
   }
 
   @PutMapping(path = "/{id}",
@@ -79,7 +82,7 @@ public class EmployeeRestController {
     List<Employee> employeeList = new ArrayList<>(employees.values());
 
     int startIndex = page * pageSize - pageSize;
-    int endIndex = page * pageSize;
+    int endIndex = Math.min(page * pageSize, employees.size());
 
     try {
       return employeeList.subList(startIndex, endIndex);
