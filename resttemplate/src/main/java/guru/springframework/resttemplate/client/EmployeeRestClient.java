@@ -9,6 +9,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
@@ -119,7 +120,13 @@ public class EmployeeRestClient {
    * @return a ResponseEntity that wraps http status code, http headers and the body of type {@link Employee}
    */
   public ResponseEntity<Employee> postForEntity(Employee newEmployee) {
-    return restTemplate.postForEntity(REQUEST_URI, newEmployee, Employee.class);
+    MultiValueMap<String, String> headers = new HttpHeaders();
+    headers.add("User-Agent", "EmployeeRestClient demo class");
+    headers.add("Accept-Language", "en-US");
+
+    HttpEntity<Employee> entity = new HttpEntity<>(newEmployee, headers);
+
+    return restTemplate.postForEntity(REQUEST_URI, entity, Employee.class);
   }
 
   /**
