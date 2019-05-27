@@ -8,12 +8,16 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:11-browsers-legacy
+        environment:
+          APP_DATASOURCE_MEMBER_PASSWORD: ''
+          APP_DATASOURCE_CARDHOLDER_PASSWORD: ''
+          APP_DATASOURCE_CARD_PASSWORD: ''
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
-
+      - image: circleci/mysql:5.7.26
     working_directory: ~/repo
 
     environment:
@@ -22,6 +26,11 @@ jobs:
 
     steps:
       - checkout
+
+      - run:
+          name: Wait for DB
+          # preinstalled in circleci/* docker image
+          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
 
       # Download and cache dependencies
       - restore_cache:
