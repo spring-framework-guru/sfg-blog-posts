@@ -59,6 +59,7 @@
         <module>springdependencyinjection</module>
         <module>jdbc-template</module>
         <module>spring-factory-method</module>
+        <module>resttemplate</module>
         <module>multiple-data-sources</module>
     </modules>
 </project>
