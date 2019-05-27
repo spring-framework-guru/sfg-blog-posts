@@ -53,6 +53,7 @@
 
     <modules>
         <module>example-post</module>
+        <module>resourceloaderdemo</module>
         <module>springawareinterfaces</module>
         <module>springboot-graphql-app</module>
         <module>springdependencyinjection</module>
