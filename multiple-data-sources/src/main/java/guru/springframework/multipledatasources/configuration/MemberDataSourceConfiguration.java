@@ -17,9 +17,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
-/**
- * @author maureen on 26/5/2019
- */
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "guru.springframework.multipledatasources.repository.member",

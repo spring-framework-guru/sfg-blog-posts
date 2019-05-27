@@ -15,9 +15,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-/**
- * @author maureen on 26/5/2019
- */
 @Configuration
 @EnableJpaRepositories(basePackages = "guru.springframework.multipledatasources.repository.cardholder",
         entityManagerFactoryRef = "cardHolderEntityManagerFactory",
