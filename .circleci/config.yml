@@ -9,9 +9,9 @@ jobs:
       # specify the version you desire here
       - image: circleci/openjdk:11-browsers-legacy
         environment:
-          - APP_DATASOURCE_MEMBER_PASSWORD=''
-          - APP_DATASOURCE_CARDHOLDER_PASSWORD=''
-          - APP_DATASOURCE_CARD_PASSWORD=''
+          APP_DATASOURCE_MEMBER_PASSWORD:''
+          APP_DATASOURCE_CARDHOLDER_PASSWORD:''
+          APP_DATASOURCE_CARD_PASSWORD:''
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
