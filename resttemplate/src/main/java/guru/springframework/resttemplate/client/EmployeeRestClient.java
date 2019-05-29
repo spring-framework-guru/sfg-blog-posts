@@ -40,8 +40,8 @@ public class EmployeeRestClient {
                                                                 Employee.class,
                                                                 Long.toString(id));
 
-    LOG.info("Status code value: " + entity.getStatusCodeValue());
-    LOG.info("HTTP Header 'ContentType': " + entity.getHeaders().getContentType());
+    // LOG.info("Status code value: " + entity.getStatusCodeValue());
+    // LOG.info("HTTP Header 'ContentType': " + entity.getHeaders().getContentType());
 
     return entity;
   }

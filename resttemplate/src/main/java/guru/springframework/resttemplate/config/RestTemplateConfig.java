@@ -30,6 +30,7 @@ public class RestTemplateConfig {
     return new RestTemplateBuilder()
             .requestFactory(this::clientHttpRequestFactory)
             .errorHandler(new CustomClientErrorHandler())
+            .interceptors(new CustomClientHttpRequestInterceptor())
             .build();
   }
 
