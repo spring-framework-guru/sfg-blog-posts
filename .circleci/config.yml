@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:12-ea-29-jdk
+      - image: circleci/openjdk:12-jdk
         environment:
           APP_DATASOURCE_MEMBER_PASSWORD: ''
           APP_DATASOURCE_CARDHOLDER_PASSWORD: ''
