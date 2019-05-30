@@ -18,6 +18,6 @@ public class CustomClientErrorHandler implements ResponseErrorHandler {
 
   @Override
   public void handleError(ClientHttpResponse clientHttpResponse) throws IOException {
-    LOG.error("HTTP Status Code: " + clientHttpResponse.getStatusCode().value());
+    LOG.error("CustomClientErrorHandler | HTTP Status Code: " + clientHttpResponse.getStatusCode().value());
   }
 }
