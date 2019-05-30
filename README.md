@@ -9,3 +9,4 @@ The blog posts for the code in this repo are:
 - [Service Locator Pattern in Spring](https://springframework.guru/service-locator-pattern-in-spring/)
 - [Using GraphQL in a Spring Boot Application](https://springframework.guru/using-graphql-in-a-spring-boot-application/)
 - [Spring JdbcTemplate CRUD Operations](https://springframework.guru/spring-jdbctemplate-crud-operations/)
+- [Using Spring Aware Interfaces](https://springframework.guru/using-spring-aware-interfaces/)
