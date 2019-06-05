@@ -10,3 +10,7 @@ The blog posts for the examples in this repo are:
 - [Using GraphQL in a Spring Boot Application](https://springframework.guru/using-graphql-in-a-spring-boot-application/)
 - [Spring JdbcTemplate CRUD Operations](https://springframework.guru/spring-jdbctemplate-crud-operations/)
 - [Using Spring Aware Interfaces](https://springframework.guru/using-spring-aware-interfaces/)
+- [Working with Resources in Spring](https://springframework.guru/working-with-resources-in-spring/)
+- [Using RestTemplate in Spring](https://springframework.guru/using-resttemplate-in-spring/)
+- [Using RestTemplate with Apaches HttpClient](https://springframework.guru/using-resttemplate-with-apaches-httpclient/)
+- [How to Configure Multiple Data Sources in a Spring Boot Application](https://springframework.guru/how-to-configure-multiple-data-sources-in-a-spring-boot-application/)
