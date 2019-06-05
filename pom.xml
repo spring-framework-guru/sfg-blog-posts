@@ -54,5 +54,6 @@
     <modules>
         <module>example-post</module>
         <module>resourceloaderdemo</module>
+        <module>autowiringdemo</module>
     </modules>
 </project>
