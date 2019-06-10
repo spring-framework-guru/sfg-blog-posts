@@ -1,3 +1,3 @@
-# Using EhCache in Spring Boot
+# Using Ehcache in Spring Boot
 
-Example project for blog post about using EhCache in Spring Boot applications.
+Example project for blog post about using Ehcache in Spring Boot applications.

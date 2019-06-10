@@ -14,7 +14,7 @@
     <artifactId>spring-boot-ehcache</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-ehcache</name>
-    <description>Example project for blog post about using EhCache in Spring Boot applications.</description>
+    <description>Example project for blog post about using Ehcache in Spring Boot applications.</description>
 
     <properties>
         <java.version>11</java.version>
@@ -34,6 +34,12 @@
             <artifactId>ehcache</artifactId>
             <version>3.7.1</version>
         </dependency>
+        <dependency>
+            <groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
+        </dependency>
+
+        <!-- Util -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
