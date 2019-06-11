@@ -23,7 +23,7 @@
         <resources>
             <heap>1000</heap>
             <offheap unit="MB">10</offheap>
-            <disk persistent="true" unit="MB">10</disk>
+            <disk persistent="true" unit="MB">20</disk>
         </resources>
     </cache-template>
 
