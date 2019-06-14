@@ -14,7 +14,7 @@ public class Employee {
      * @param department
      */
     public Employee(Department department) {
-        System.out.println("Autowiring by using constructor");
+        System.out.println("*** Autowiring by using constructor ***");
         this.department = department;
     }
 

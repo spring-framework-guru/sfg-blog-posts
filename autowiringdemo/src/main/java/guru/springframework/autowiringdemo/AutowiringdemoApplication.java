@@ -3,13 +3,15 @@ package guru.springframework.autowiringdemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class AutowiringdemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AutowiringdemoApplication.class, args);
+		ConfigurableApplicationContext ctx = SpringApplication.run(AutowiringdemoApplication.class, args);
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		System.out.println("*** Example Using byName autowiring mode ***");
 		Employee emp = context.getBean("employeeByName", Employee.class);
@@ -28,6 +30,12 @@ public class AutowiringdemoApplication {
 		emp2.setEid(103);
 		emp2.setEname("Spring Framework Guru");
 		emp2.showEployeeDetails();
+
+		System.out.println("\n*** Example Using @Autowire annotation on property ***");
+		EmployeeBean employeeBean = ctx.getBean(EmployeeBean.class);
+		employeeBean.setEid(104);
+		employeeBean.setEname("Spring Framework Guru");
+		employeeBean.showEployeeDetails();
 	}
 
 }
