@@ -1,4 +1,4 @@
-package guru.springframework.springrestexception.exception;
+package guru.springframework.springrestexception.controller;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;

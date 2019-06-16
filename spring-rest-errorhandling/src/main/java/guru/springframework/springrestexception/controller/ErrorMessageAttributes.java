@@ -1,4 +1,4 @@
-package guru.springframework.springrestexception.controller.v4;
+package guru.springframework.springrestexception.controller;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

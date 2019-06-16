@@ -1,7 +1,7 @@
 package guru.springframework.springrestexception.controller.v1;
 
 import guru.springframework.springrestexception.domain.model.Pet;
-import guru.springframework.springrestexception.exception.ErrorMessage;
+import guru.springframework.springrestexception.controller.ErrorMessage;
 import guru.springframework.springrestexception.exception.PetNotFoundException;
 import guru.springframework.springrestexception.service.PetService;
 import java.net.URI;

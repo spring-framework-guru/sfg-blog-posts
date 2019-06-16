@@ -1,6 +1,6 @@
 package guru.springframework.springrestexception.controller.v3;
 
-import guru.springframework.springrestexception.exception.ErrorMessage;
+import guru.springframework.springrestexception.controller.ErrorMessage;
 import guru.springframework.springrestexception.exception.PetAlreadyExistsException;
 import guru.springframework.springrestexception.exception.PetNotFoundException;
 import guru.springframework.springrestexception.exception.ServiceException;
