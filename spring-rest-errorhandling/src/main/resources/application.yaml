@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    #    url: jdbc:h2:file:~/h2/pet_db;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:~/h2/pet_db
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    generate-ddl: false
+    #    hibernate.ddl-auto: create
+    hibernate.ddl-auto: validate
