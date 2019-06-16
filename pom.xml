@@ -61,6 +61,7 @@
         <module>spring-factory-method</module>
         <module>resttemplate</module>
         <module>multiple-data-sources</module>
-      <module>spring-boot-ehcache</module>
+        <module>spring-boot-ehcache</module>
+        <module>spring-rest-errorhandling</module>
     </modules>
 </project>
