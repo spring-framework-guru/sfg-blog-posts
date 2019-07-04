@@ -26,24 +26,24 @@ public class Book {
         return bookAuthor;
     }
 
-    public void setBookAuthor(String author) {
-        this.bookAuthor = author;
+    public void setBookAuthor(String bookAuthor) {
+        this.bookAuthor = bookAuthor;
     }
 
     public float getBookPrice() {
         return bookPrice;
     }
 
-    public void setBookPrice(float price) {
+    public void setBookPrice(float bookPrice) {
         this.bookPrice = bookPrice;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + bookName + '\'' +
-                ", author='" + bookAuthor + '\'' +
-                ", price=" + bookPrice +
+                "bookName='" + bookName + '\'' +
+                ", bookAuthor='" + bookAuthor + '\'' +
+                ", bookPrice=" + bookPrice +
                 '}';
     }
 }
