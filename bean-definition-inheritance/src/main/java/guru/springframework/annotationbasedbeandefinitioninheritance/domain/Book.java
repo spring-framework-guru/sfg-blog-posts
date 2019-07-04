@@ -1,14 +1,14 @@
-package guru.springframework.annotationbasedbeandefinationinheritance.domain;
+package guru.springframework.annotationbasedbeandefinitioninheritance.domain;
 
 public class Book {
     private String bookName;
-    private int bookPrice;
+    private float bookPrice;
     private String authorName;
 
     public Book() {
     }
 
-    public Book(String bookName, int bookPrice, String authorName) {
+    public Book(String bookName, float bookPrice, String authorName) {
         this.bookName = bookName;
         this.bookPrice = bookPrice;
         this.authorName = authorName;
@@ -22,11 +22,11 @@ public class Book {
         this.bookName = bookName;
     }
 
-    public int getBookPrice() {
+    public float getBookPrice() {
         return bookPrice;
     }
 
-    public void setBookPrice(int bookPrice) {
+    public void setBookPrice(float bookPrice) {
         this.bookPrice = bookPrice;
     }
 

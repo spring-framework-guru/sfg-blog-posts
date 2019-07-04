@@ -3,13 +3,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="BaseBook" class="guru.springframework.xmlbasedbeandefinationinheritance.domain.Book" abstract="true">
+    <bean id="BaseBook" class="guru.springframework.xmlbasedbeandefinitioninheritance.domain.Book" abstract="true">
         <property name="bookName" value="Start Where You Are" />
     </bean>
 
     <bean id="BookBean" parent="BaseBook">
         <property name="bookAuthor" value="Meera Lee Patel" />
-        <property name="bookPrice" value="400" />
+        <property name="bookPrice" value="40.00" />
     </bean>
 
 </beans>

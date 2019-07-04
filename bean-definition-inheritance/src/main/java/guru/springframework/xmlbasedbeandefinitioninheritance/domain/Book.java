@@ -1,14 +1,14 @@
-package guru.springframework.xmlbasedbeandefinationinheritance.domain;
+package guru.springframework.xmlbasedbeandefinitioninheritance.domain;
 
 public class Book {
     private String bookName;
     private String bookAuthor;
-    private int bookPrice;
+    private float bookPrice;
 
     public Book() {
     }
 
-    public Book(String bookName, String bookAuthor, int bookPrice) {
+    public Book(String bookName, String bookAuthor, float bookPrice) {
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;
         this.bookPrice = bookPrice;
@@ -30,11 +30,11 @@ public class Book {
         this.bookAuthor = author;
     }
 
-    public int getBookPrice() {
+    public float getBookPrice() {
         return bookPrice;
     }
 
-    public void setBookPrice(int price) {
+    public void setBookPrice(float price) {
         this.bookPrice = bookPrice;
     }
 

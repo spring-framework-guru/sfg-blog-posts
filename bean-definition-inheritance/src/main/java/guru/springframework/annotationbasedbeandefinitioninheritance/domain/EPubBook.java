@@ -1,4 +1,4 @@
-package guru.springframework.annotationbasedbeandefinationinheritance.domain;
+package guru.springframework.annotationbasedbeandefinitioninheritance.domain;
 
 public class EPubBook extends Book {
     private String downloadUrl;

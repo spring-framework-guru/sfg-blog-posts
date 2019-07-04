@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>guru.springframework</groupId>
-    <artifactId>annotation-based-bean-defination-inheritance</artifactId>
+    <artifactId>xbean-definition-inheritance</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>example-post</name>
     <description>Demo project for Spring Boot</description>
