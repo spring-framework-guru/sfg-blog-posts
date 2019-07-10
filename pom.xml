@@ -26,7 +26,7 @@
 
     <packaging>pom</packaging>
 
-    <description>Parent Project for SFG </description>
+    <description>Parent Project for SFG</description>
 
     <licenses>
         <license>
@@ -62,6 +62,8 @@
         <module>spring-factory-method</module>
         <module>resttemplate</module>
         <module>multiple-data-sources</module>
-      <module>spring-boot-ehcache</module>
+        <module>spring-boot-ehcache</module>
+        <module>bean-definition-inheritance</module>
+        <module>springbeanlifecycle</module>
     </modules>
 </project>
