@@ -17,6 +17,8 @@ public class BeanDefinitionInheritanceDemoApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Book book = (Book) context.getBean("BookBean");
         System.out.println("Book Details: " + book);
+
+
         //Annotation based Bean Definition Test
         System.out.println("Annotation based Bean Definition Inheritance Test");
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();

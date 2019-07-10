@@ -1,4 +1,4 @@
-git <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~  Copyright 2019 the original author or authors.
   ~
@@ -64,6 +64,6 @@ git <?xml version="1.0" encoding="UTF-8"?>
         <module>multiple-data-sources</module>
         <module>spring-boot-ehcache</module>
         <module>bean-definition-inheritance</module>
-
+        <module>springbeanlifecycle</module>
     </modules>
 </project>
