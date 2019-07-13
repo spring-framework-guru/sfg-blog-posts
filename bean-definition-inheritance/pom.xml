@@ -11,11 +11,14 @@
     <groupId>guru.springframework</groupId>
     <artifactId>xbean-definition-inheritance</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>example-post</name>
+
+    <name>xbean-definition-inheritance</name>
+
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
     <dependencies>
