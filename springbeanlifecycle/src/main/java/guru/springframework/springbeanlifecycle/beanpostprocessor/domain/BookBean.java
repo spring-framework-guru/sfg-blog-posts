@@ -4,15 +4,15 @@ public class BookBean {
     private String bookName;
 
     public BookBean() {
-        System.out.println("Constructor of BookBean is called !! ");
+        System.out.println("Constructor of BookBean called !! ");
 
     }
 
     public void init() throws Exception {
-        System.out.println("custom custom init method of BookBean is called !! ");
+        System.out.println("Custom init method of BookBean called !! ");
     }
     public void destroy() throws Exception {
-        System.out.println(" custom destroy  method of BookBean is called !! ");
+        System.out.println("Custom destroy  method of BookBean is called !! ");
     }
 
     public BookBean(String bookName) {
