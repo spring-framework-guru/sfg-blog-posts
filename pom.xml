@@ -65,5 +65,6 @@
         <module>spring-boot-ehcache</module>
         <module>bean-definition-inheritance</module>
         <module>springbeanlifecycle</module>
+        <module>spring-profiles</module>
     </modules>
 </project>

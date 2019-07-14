@@ -9,16 +9,13 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>guru.springframework</groupId>
-    <artifactId>bean-definition-inheritance</artifactId>
+    <artifactId>spring-profiles</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
-    <name>xbean-definition-inheritance</name>
-
+    <name>example-post</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>
-        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
     <dependencies>

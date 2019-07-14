@@ -13,7 +13,7 @@ public class Book implements InitializingBean, DisposableBean {
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("destroy method of Book bean is called !! ");
+        System.out.println("Destroy method of Book bean called !! ");
     }
 
     @Override

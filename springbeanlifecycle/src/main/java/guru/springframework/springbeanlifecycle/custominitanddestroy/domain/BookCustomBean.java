@@ -12,11 +12,11 @@ public class BookCustomBean {
 
     public void customDestroy() throws Exception {
 
-        System.out.println("custom destroy method of BookCustomBean is called !! ");
+        System.out.println("Custom destroy method of BookCustomBean called !! ");
     }
 
     public void customInit() throws Exception {
-        System.out.println("custom Init  method of BookCustomBean is called !! ");
+        System.out.println("Custom Init  method of BookCustomBean called !! ");
     }
 
     public BookCustomBean(String bookName) {
