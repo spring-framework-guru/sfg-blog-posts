@@ -19,7 +19,7 @@ import java.util.*;
 @SuppressWarnings("WeakerAccess")
 public class EmployeeRestClient {
 
-  private static final String RESOURCE_PATH = "/rest/employees";
+  private static final String RESOURCE_PATH = "/controller/employees";
 
   private Logger LOG = LoggerFactory.getLogger(EmployeeRestClient.class);
   private String REQUEST_URI;
@@ -40,8 +40,8 @@ public class EmployeeRestClient {
                                                                 Employee.class,
                                                                 Long.toString(id));
 
-    // LOG.info("Status code value: " + entity.getStatusCodeValue());
-    // LOG.info("HTTP Header 'ContentType': " + entity.getHeaders().getContentType());
+    // LOG.info("Status code value: " + domain.getStatusCodeValue());
+    // LOG.info("HTTP Header 'ContentType': " + domain.getHeaders().getContentType());
 
     return entity;
   }
