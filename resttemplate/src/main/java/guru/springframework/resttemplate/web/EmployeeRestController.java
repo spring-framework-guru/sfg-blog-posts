@@ -50,7 +50,7 @@ public class EmployeeRestController {
     employees.put(newEmployee.getId(), newEmployee);
 
     return ResponseEntity.status(HttpStatus.CREATED)
-            .header("Location", "/rest/employees/" + newEmployee.getId())
+            .header("Location", "/controller/employees/" + newEmployee.getId())
             .body(newEmployee);
   }
 

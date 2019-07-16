@@ -66,5 +66,6 @@
         <module>bean-definition-inheritance</module>
         <module>springbeanlifecycle</module>
         <module>spring-profiles</module>
+        <module>hikaricp-springboot2-mysql</module>
     </modules>
 </project>
