@@ -19,7 +19,7 @@ import java.util.*;
 @SuppressWarnings("WeakerAccess")
 public class EmployeeRestClient {
 
-  private static final String RESOURCE_PATH = "/controller/employees";
+  private static final String RESOURCE_PATH = "/rest/employees";
 
   private Logger LOG = LoggerFactory.getLogger(EmployeeRestClient.class);
   private String REQUEST_URI;
