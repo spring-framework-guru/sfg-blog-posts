@@ -8,7 +8,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'guru.springframework'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '12'
+sourceCompatibility = '11'
 
 configurations {
     compileOnly {

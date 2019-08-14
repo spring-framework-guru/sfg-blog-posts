@@ -1,5 +1,7 @@
 package guru.springframework.gradlelombok;
 
+import guru.springframework.gradlelombok.domain.Job;
+import guru.springframework.gradlelombok.domain.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

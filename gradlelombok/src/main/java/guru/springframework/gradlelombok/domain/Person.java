@@ -1,4 +1,4 @@
-package guru.springframework.gradlelombok;
+package guru.springframework.gradlelombok.domain;
 
 import lombok.Builder;
 import lombok.Getter;
