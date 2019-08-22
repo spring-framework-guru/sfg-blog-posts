@@ -7,11 +7,11 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @EnableConfigurationProperties(DBConfiguration.class)
-public class DbConnectionConfiguration {
+public class DBConnectionConfiguration {
 
     private DBConfiguration dbConfiguration;
 
-    public DbConnectionConfiguration(DBConfiguration dbConfiguration) {
+    public DBConnectionConfiguration(DBConfiguration dbConfiguration) {
         this.dbConfiguration = dbConfiguration;
     }
 

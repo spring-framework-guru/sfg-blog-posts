@@ -67,5 +67,6 @@
         <module>springbeanlifecycle</module>
         <module>spring-profiles</module>
         <module>hikaricp-springboot2-mysql</module>
+        <module>springboot-lombok</module>
     </modules>
 </project>

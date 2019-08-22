@@ -5,29 +5,27 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <!--     callbackinterfaces-->
-    <bean id="bookBean" class="guru.springframework.springbeanlifecycle.callbackinterfaces.domain.Book">
-        <property name="bookName" value="Believe in Yourself"/>
-    </bean>
+    <!--    &lt;!&ndash;     callbackinterfaces&ndash;&gt;-->
+       <!-- <bean id="bookBean" class="guru.springframework.springbeanlifecycle.callbackinterfaces.domain.Book">
+            <property name="bookName" value="Believe in Yourself"/>
+        </bean>-->
 
     <!--    awareinterfaces-->
-    <bean id="awareBean" class="guru.springframework.springbeanlifecycle.awareinterfaces.domain.AwareBeanImpl">
-    </bean>
+     <!-- <bean id="awareBean" class="guru.springframework.springbeanlifecycle.awareinterfaces.domain.AwareBeanImpl">
+      </bean>-->
 
-    <!--    custominitanddestroy-->
-    <bean id="customLifeCycleBookBean"
-          class="guru.springframework.springbeanlifecycle.custominitanddestroy.domain.BookCustomBean"
-          init-method="customInit"
-          destroy-method="customDestroy">
-        <property name="bookName" value="Life and Laughing"></property>
-    </bean>
+    <!--    Declare custom init and destroy methods-->
+  <!--   <bean id="customLifeCycleBookBean"
+           class="guru.springframework.springbeanlifecycle.custominitanddestroy.domain.BookCustomBean"
+           init-method="customInit"
+           destroy-method="customDestroy">
+         <property name="bookName" value="Life and Laughing"></property>
+     </bean>-->
 
     <!--    beanpostprocessor-->
-    <bean id="bookBeanPost" init-method="init" destroy-method="destroy"
-          class="guru.springframework.springbeanlifecycle.beanpostprocessor.domain.BookBean">
+    <bean id="bookBeanPost" class="guru.springframework.springbeanlifecycle.beanpostprocessor.domain.BookBean">
         <property name="bookName" value="Gone with the Wind"></property>
     </bean>
     <bean id="bookBeanPostProcessor"
           class="guru.springframework.springbeanlifecycle.beanpostprocessor.domain.BookBeanPostProcessor"/>
-
 </beans>
