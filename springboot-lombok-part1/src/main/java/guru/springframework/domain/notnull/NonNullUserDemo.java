@@ -1,8 +1,12 @@
 package guru.springframework.domain.notnull;
 
-import javax.validation.constraints.NotNull;
 
-public class NotNullUserDemo {
+import lombok.NonNull;
+
+
+
+
+public class NonNullUserDemo {
     private int userId;
     private String userName;
     private int userAge;
@@ -11,7 +15,7 @@ public class NotNullUserDemo {
         @NotNull generates a null-check statement
     */
 
-    public NotNullUserDemo(@NotNull int userId, String userName, int userAge) {
+    public NonNullUserDemo(int userId, @NonNull String userName, int userAge) {
         this.userId = userId;
         this.userName = userName;
         this.userAge = userAge;
