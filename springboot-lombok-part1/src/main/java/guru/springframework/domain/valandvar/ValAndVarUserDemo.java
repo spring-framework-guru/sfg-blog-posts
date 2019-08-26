@@ -1,27 +1,29 @@
 package guru.springframework.domain.valandvar;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import lombok.val;
+
 
 public class ValAndVarUserDemo {
     public String valCheck() {
         /*
         val makes local final variable (inside method)
+        Trying to assign a value will result in Error: java: cannot assign a value to final variable userName
         */
-        val list = new ArrayList<String>();
-        list.add("Example of Val");
-        val getElement = list.get(0);
-        return getElement.toLowerCase();
+        val userName = "Hello World";
+        System.out.println(userName.getClass());
+        return userName.toLowerCase();
     }
 
-    public String varCheck() {
+    public Object varCheck() {
          /*
-          val makes local variable (inside method)
+          var makes local variable (inside method). Same as var but is not marked final
         */
-        var list = new ArrayList<String>();
-        list.add("Example of Var");
-        var getElement = list.get(0);
-        return getElement.toLowerCase();
+        var money = new BigDecimal(53.00);
+        System.out.println(money.getClass());
+        money=new BigDecimal(80.00);
+        return money;
     }
 }
