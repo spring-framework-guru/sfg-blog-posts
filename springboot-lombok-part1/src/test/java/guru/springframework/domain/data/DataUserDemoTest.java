@@ -25,7 +25,7 @@ public class DataUserDemoTest {
         test @Data annotation
     */
     @Test
-    public void testDataAnnotationForDataUserDemo() {
+    public void testDataAnnotationForGetterandSetter() {
         dataUserDemo.setUserId(101);
         dataUserDemo.setUserName("John Doe");
         dataUserDemo.setUserAge(25);
@@ -33,5 +33,22 @@ public class DataUserDemoTest {
         assertEquals( "John Doe", dataUserDemo.getUserName());
         assertEquals( 25, dataUserDemo.getUserAge());
         System.out.println(dataUserDemo);
+    }
+
+    @Test
+    public void testDataAnnotationForToString() {
+        dataUserDemo.setUserId(101);
+        dataUserDemo.setUserName("John Doe");
+        dataUserDemo.setUserAge(25);
+        assertTrue(dataUserDemo.toString().startsWith(DataUserDemo.class.getSimpleName()));
+        assertTrue(dataUserDemo.toString().endsWith("(userId=101, userName=John Doe, userAge=25)"));
+    }
+
+    @Test
+    public void testDataAnnotationForEqualsAndHashCode() {
+        DataUserDemo dataUserDemo1 = new DataUserDemo();
+        DataUserDemo dataUserDemo2 = new DataUserDemo();
+        assertTrue((dataUserDemo1).equals(dataUserDemo2));
+        assertEquals(dataUserDemo1.hashCode(),dataUserDemo2.hashCode());
     }
 }
