@@ -22,7 +22,7 @@ public class DataUserDemoTest {
     }
 
     /*
-        test @Data annotation
+        test @Data annotation for getter and setter
     */
     @Test
     public void testDataAnnotationForGetterandSetter() {
@@ -35,6 +35,9 @@ public class DataUserDemoTest {
         System.out.println(dataUserDemo);
     }
 
+    /*
+        test @Data annotation for toString
+    */
     @Test
     public void testDataAnnotationForToString() {
         dataUserDemo.setUserId(101);
@@ -44,6 +47,9 @@ public class DataUserDemoTest {
         assertTrue(dataUserDemo.toString().endsWith("(userId=101, userName=John Doe, userAge=25)"));
     }
 
+    /*
+        test @Data annotation for equalsAndHashcode
+    */
     @Test
     public void testDataAnnotationForEqualsAndHashCode() {
         DataUserDemo dataUserDemo1 = new DataUserDemo();
