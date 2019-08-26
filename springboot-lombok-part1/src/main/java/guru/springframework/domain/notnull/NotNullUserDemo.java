@@ -10,7 +10,6 @@ public class NotNullUserDemo {
     /*
         @NotNull generates a null-check statement
     */
-
     public NotNullUserDemo(@NotNull int userId, String userName, int userAge) {
         this.userId = userId;
         this.userName = userName;
