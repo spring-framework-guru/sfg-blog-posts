@@ -10,22 +10,25 @@ import static org.junit.Assert.*;
 
 public class ConstructorUserDemoTest {
 
-    ConstructorUserDemo constructorUserDemo;
+    private ConstructorUserDemo constructorUserDemo;
+    /*
+         test @NoArgsConstructor annotation
+     */
+    @Test
+    public void testDataAnnotationForNoArgsConstructor() {
+        constructorUserDemo = new ConstructorUserDemo();
+        assertNotNull(constructorUserDemo);
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
     }
 
     /*
-        test @NoArgsConstructor and @AllArgsConstructor annotation
+        test @AllArgsConstructor annotation
     */
     @Test
-    public void testDataAnnotationForConstructor() {
+    public void testDataAnnotationForAllArgsConstructor() {
         constructorUserDemo = new ConstructorUserDemo(100, "John Doe", 25);
+        assertNotNull(constructorUserDemo);
+
     }
 
 }
