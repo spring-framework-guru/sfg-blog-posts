@@ -16,8 +16,11 @@ public class ValAndVarUserDemo {
     }
 
     public String varCheck() {
+         /*
+          val makes local variable (inside method)
+        */
         var list = new ArrayList<String>();
-        list.add("Example of Val");
+        list.add("Example of Var");
         var getElement = list.get(0);
         return getElement.toLowerCase();
     }
