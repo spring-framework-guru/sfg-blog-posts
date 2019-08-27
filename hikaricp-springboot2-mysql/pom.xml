@@ -11,8 +11,8 @@
 	<groupId>com.stackroute.springboot</groupId>
 	<artifactId>hikaricp-springboot2-mysql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>employee-crud-demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>hikaricp-springboot2-mysql</name>
+	<description>Demo project for Spring Boot with Hikari CP</description>
 
 	<properties>
 		<java.version>1.8</java.version>

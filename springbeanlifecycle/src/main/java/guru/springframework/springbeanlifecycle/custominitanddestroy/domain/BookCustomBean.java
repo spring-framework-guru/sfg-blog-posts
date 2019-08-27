@@ -1,8 +1,5 @@
 package guru.springframework.springbeanlifecycle.custominitanddestroy.domain;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
 public class BookCustomBean {
     private String bookName;
 

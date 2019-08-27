@@ -23,27 +23,26 @@ public class SpringBeanLifecycleApplication {
         Book book = (Book) context.getBean("bookBean");
         System.out.println(book.getBookName());
         ((AbstractApplicationContext) context).registerShutdownHook();
-//
-////		-------awareinterfaces---------
-//        ApplicationContext context1 =
-//                new ClassPathXmlApplicationContext("beans.xml");
-//        AwareBeanImpl awareBeanImpl = (AwareBeanImpl) context1.getBean("awareBean");
-//        ((AbstractApplicationContext) context1).registerShutdownHook();
-//
-////		-------custominitanddestroy------
-//        ApplicationContext context3 =
-//                new ClassPathXmlApplicationContext("beans.xml");
-//
-//        BookCustomBean bookCustomBean = (BookCustomBean) context3.getBean("customLifeCycleBookBean");
-//        ((AbstractApplicationContext) context3).registerShutdownHook();
-//
-//        //    -------beanpostprocessor------
-//        ApplicationContext context4 =
-//                new ClassPathXmlApplicationContext("beans.xml");
-//        BookBean bookBean = (BookBean) context4.getBean("bookBeanPost");
-//        ((AbstractApplicationContext) context4).registerShutdownHook();
-//
-//
+
+//		-------awareinterfaces---------
+        /*ApplicationContext context1 =
+                new ClassPathXmlApplicationContext("beans.xml");
+        AwareBeanImpl awareBeanImpl = (AwareBeanImpl) context1.getBean("awareBean");
+        ((AbstractApplicationContext) context1).registerShutdownHook();*/
+
+//		-------custominitanddestroy------
+       /* ApplicationContext context3 =
+                new ClassPathXmlApplicationContext("beans.xml");
+
+        BookCustomBean bookCustomBean = (BookCustomBean) context3.getBean("customLifeCycleBookBean");
+        ((AbstractApplicationContext) context3).registerShutdownHook();*/
+
+        //    -------beanpostprocessor------
+        /*ApplicationContext context4 =
+                new ClassPathXmlApplicationContext("beans.xml");
+        BookBean bookBean = (BookBean) context4.getBean("bookBeanPost");
+        ((AbstractApplicationContext) context4).registerShutdownHook();*/
+
    }
 
 }

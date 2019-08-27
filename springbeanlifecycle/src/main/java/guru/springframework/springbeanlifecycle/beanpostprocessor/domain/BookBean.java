@@ -8,13 +8,6 @@ public class BookBean {
 
     }
 
-    public void init() throws Exception {
-        System.out.println("Custom init method of BookBean called !! ");
-    }
-    public void destroy() throws Exception {
-        System.out.println("Custom destroy  method of BookBean is called !! ");
-    }
-
     public BookBean(String bookName) {
         this.bookName = bookName;
     }
