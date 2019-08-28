@@ -12,13 +12,14 @@ public class SqlTimestampConverter {
 
   @NotNull
   public static OffsetDateTime toOffsetDateTime(@NotNull Timestamp timestamp) {
-    return OffsetDateTime.of(timestamp.toLocalDateTime().getYear(),
-                             timestamp.toLocalDateTime().getMonthValue(),
-                             timestamp.toLocalDateTime().getDayOfMonth(),
-                             timestamp.toLocalDateTime().getHour(),
-                             timestamp.toLocalDateTime().getMinute(),
-                             timestamp.toLocalDateTime().getSecond(),
-                             timestamp.toLocalDateTime().getNano(),
+    LocalDateTime dateTime = timestamp.toLocalDateTime();
+    return OffsetDateTime.of(dateTime.getYear(),
+                             dateTime.getMonthValue(),
+                             dateTime.getDayOfMonth(),
+                             dateTime.getHour(),
+                             dateTime.getMinute(),
+                             dateTime.getSecond(),
+                             dateTime.getNano(),
                              ZoneOffset.UTC);
   }
 

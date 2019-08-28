@@ -7,18 +7,13 @@
     <groupId>guru.springframework</groupId>
     <artifactId>datetime-conversion</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <name>datetime-conversion</name>
+    <description>Example project for blog posts showing conversion between different DateTime and Timestamp classes.</description>
+
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.jetbrains</groupId>
@@ -27,11 +22,18 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    <name>datetime-conversion</name>
-    <description>Example project for blog posts showing conversion between different DateTime and Timestamp classes.</description>
 
-    <properties>
-        <java.version>11</java.version>
-    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
