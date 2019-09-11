@@ -7,16 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BuilderUserDemoTest {
-    BuilderUserDemo builderUserDemo;
-
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
+    private BuilderUserDemo builderUserDemo;
     /*
         test @Builder annotation
     */
