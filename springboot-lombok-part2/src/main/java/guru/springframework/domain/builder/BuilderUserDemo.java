@@ -4,7 +4,8 @@ import lombok.*;
 
 @Data
 /*
-@Builder annotation creates instances of our class
+@Builder annotation generates boilerplate code
+to create instances of our class using the Builder pattern
 */
 @Builder(toBuilder = true)
 public class BuilderUserDemo {

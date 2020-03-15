@@ -83,5 +83,6 @@
         <module>hikaricp-springboot2-mysql</module>
         <module>springboot-lombok-part1</module>
         <module>springboot-lombok-part2</module>
+        <module>spring-requestbody-annotation</module>
     </modules>
 </project>
