@@ -84,5 +84,6 @@
         <module>springboot-lombok-part1</module>
         <module>springboot-lombok-part2</module>
         <module>spring-requestbody-annotation</module>
+        <module>spring-bean-scopes</module>
     </modules>
 </project>
