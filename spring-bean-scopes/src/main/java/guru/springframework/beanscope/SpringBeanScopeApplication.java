@@ -1,13 +1,13 @@
-package guru.springframework.examplepost;
+package guru.springframework.beanscope;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExamplePostApplication {
+public class SpringBeanScopeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ExamplePostApplication.class, args);
+        SpringApplication.run(SpringBeanScopeApplication.class, args);
     }
 
 }
