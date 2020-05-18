@@ -14,3 +14,4 @@ The blog posts for the examples in this repo are:
 - [Using RestTemplate in Spring](https://springframework.guru/using-resttemplate-in-spring/)
 - [Using RestTemplate with Apaches HttpClient](https://springframework.guru/using-resttemplate-with-apaches-httpclient/)
 - [How to Configure Multiple Data Sources in a Spring Boot Application](https://springframework.guru/how-to-configure-multiple-data-sources-in-a-spring-boot-application/)
+- [Why you should be using Spring Boot Docker Layers](https://springframework.guru/why-you-should-be-using-spring-boot-docker-layers/)

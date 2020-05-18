@@ -85,5 +85,7 @@
         <module>springboot-lombok-part2</module>
         <module>spring-requestbody-annotation</module>
         <module>spring-bean-scopes</module>
+        <module>docker-layer-svc1</module>
+        <module>docker-layer-svc2</module>
     </modules>
 </project>
