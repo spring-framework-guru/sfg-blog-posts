@@ -87,5 +87,6 @@
         <module>spring-bean-scopes</module>
         <module>docker-layer-svc1</module>
         <module>docker-layer-svc2</module>
+        <module>spring-boot-docker</module>
     </modules>
 </project>
