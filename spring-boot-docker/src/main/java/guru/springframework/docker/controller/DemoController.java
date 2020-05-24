@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * HTTP requests to handler methods
  */
 @RequestMapping(value = "/api/v1")
-public class ServiceController {
+public class DemoController {
 
     /**
      * To get the property values

@@ -2,7 +2,7 @@ server:
     port: 8088
 spring:
     application:
-        name: service-app
+        name: demo-app
 
 app:
-    message: Welcome to Service App!!
+    message: Welcome to Demo App!!
