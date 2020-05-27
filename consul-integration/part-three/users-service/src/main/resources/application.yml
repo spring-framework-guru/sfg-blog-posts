@@ -1,0 +1,5 @@
+server:
+  port: 0
+spring:
+  application:
+    name: users-service
