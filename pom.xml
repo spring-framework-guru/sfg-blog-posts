@@ -88,6 +88,6 @@
         <module>docker-layer-svc1</module>
         <module>docker-layer-svc2</module>
         <module>spring-boot-docker</module>
-        <module>publish-docker-images-to-docker-hub</module>
+        <module>publish-docker-image-to-docker-hub</module>
     </modules>
 </project>
