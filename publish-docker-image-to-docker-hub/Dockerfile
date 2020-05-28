@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11
 WORKDIR usr/src
 COPY ./pom.xml ./pom.xml
 COPY mvnw .
