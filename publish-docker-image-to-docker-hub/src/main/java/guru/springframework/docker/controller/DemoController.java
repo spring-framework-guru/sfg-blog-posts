@@ -25,6 +25,7 @@ public class DemoController {
 
     @GetMapping("/message")
     public String getMessage() {
+
         return message;
     }
 }
