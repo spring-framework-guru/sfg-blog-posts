@@ -89,5 +89,6 @@
         <module>docker-layer-svc2</module>
         <module>spring-boot-docker</module>
         <module>publish-docker-image-to-docker-hub</module>
+        <module>automate-dockerization</module>
     </modules>
 </project>
