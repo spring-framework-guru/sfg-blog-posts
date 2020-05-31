@@ -58,7 +58,6 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.33.0</version>
                 <configuration>
-                    <!--					<dockerHost>tcp://192.168.99.103:2375</dockerHost>-->
                     <dockerHost>unix:///var/run/docker.sock</dockerHost>
                     <verbose>true</verbose>
                     <images>
