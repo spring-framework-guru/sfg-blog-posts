@@ -1,0 +1,14 @@
+server:
+    port: 8082
+spring:
+    application:
+        name: service-app
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/user
+    datasource:
+        driver-class-name: mongodb.jdbc.MongoDriver
+app:
+    exceptionMessage: User already exists!
+    globalExceptionMessage: Database connectivity lost!
+
