@@ -12,7 +12,6 @@ services:
     healthcheck:
       test: "exit 0"
 
-
   user-service:
     build: user-service/
     image: user-service
