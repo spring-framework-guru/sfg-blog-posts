@@ -1,14 +1,11 @@
 package guru.springframework;
 
-import java.time.OffsetDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import guru.springframework.service.DateConverter;
+import guru.springframework.service.DateConverterImpl;
 
 public class Main {
     public static void main(String[] args) {
-        DateConvertor dateConvertor = new DateConvertor();
-
-        dateConvertor.getDateTimeWithOffset();
+        DateConverter dateConvertor = new DateConverterImpl();
 
         dateConvertor.convertToZonedDateTime();
 

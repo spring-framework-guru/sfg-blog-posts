@@ -1,10 +1,10 @@
-package guru.springframework;
+package guru.springframework.service;
 
 import java.time.OffsetDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-public class DateConvertor {
+public class DateConverterImpl implements DateConverter{
     ZoneId zoneId = ZoneId.of("Asia/Kolkata");
 
     public ZonedDateTime convertToZonedDateTime() {
