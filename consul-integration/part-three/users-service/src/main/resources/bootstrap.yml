@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    consul:
+      host: 172.17.0.1
+      discovery:
+        prefer-ip-address: true
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      config:
+
+        failFast: false
+        format: yaml

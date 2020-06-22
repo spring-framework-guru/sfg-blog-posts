@@ -27,6 +27,8 @@ jobs:
     steps:
       - checkout
 
+      - setup_remote_docker
+
       - run:
           name: Wait for DB
           # preinstalled in circleci/* docker image
