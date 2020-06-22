@@ -1,9 +1,9 @@
-package guru.springframework.service;
+    package guru.springframework.service;
 
-import java.time.ZonedDateTime;
+    import java.time.ZonedDateTime;
 
-public interface DateConverter {
-    public ZonedDateTime convertToZonedDateTime();
-    public ZonedDateTime convertToAtZoneSameInstant();
-    public ZonedDateTime convertToAtZoneSimilarLocal();
-}
+    public interface DateConverter {
+        public ZonedDateTime convertToZonedDateTime();
+        public ZonedDateTime convertToAtZoneSameInstant();
+        public ZonedDateTime convertToAtZoneSimilarLocal();
+    }
