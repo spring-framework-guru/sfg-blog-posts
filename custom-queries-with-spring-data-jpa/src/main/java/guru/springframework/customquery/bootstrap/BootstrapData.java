@@ -24,14 +24,30 @@ public class BootstrapData implements CommandLineRunner {
                 .status(true)
                 .build();
         Book book2=Book.builder()
-                .title("CI/CD in the Enterprise")
-                .author("Meghna N")
+                .title("I Dare")
+                .author("Kiran Bedi")
                 .status(false)
                 .build();
-        //Add more books
-
+        Book book3=Book.builder()
+                .title("Development as Freedom")
+                .author("Amartya Sen")
+                .status(false)
+                .build();
+        Book book4=Book.builder()
+                .title("Clear City of the Day")
+                .author("Anita Desai")
+                .status(false)
+                .build();
+        Book book5=Book.builder()
+                .title("The Argumentative Indian")
+                .author("Amartya Sen")
+                .status(false)
+                .build();
         bookRepository.save(book1);
         bookRepository.save(book2);
+        bookRepository.save(book3);
+        bookRepository.save(book4);
+        bookRepository.save(book5);
         log.info("Inserted book1, book2...");
 
     }
