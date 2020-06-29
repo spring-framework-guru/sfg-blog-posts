@@ -4,17 +4,17 @@ import guru.springframework.customquery.domain.Book;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.hamcrest.CoreMatchers.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.JpaSort;
-
-import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.hasProperty;
 
 @SpringBootTest
 class BookRepositoryTest {
@@ -25,90 +25,107 @@ class BookRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        book1 = new Book(6, "Time Machine", "Herbert George Wells", true);
-        book2 = new Book(7, "Time Machine", "George Wells", false);
+        Book book1=Book.builder()
+                .isbn("0-2169-6768-6")
+                .title("I Dare")
+                .author("James Cassy")
+                .status(true)
+                .build();
+        Book book2=Book.builder()
+                .isbn("0-5395-2414-X")
+                .title("I Dare")
+                .author("Patrick")
+                .status(false)
+                .build();
+        Book book3=Book.builder()
+                .isbn("0-2139-7448-7")
+                .title("Time Machine")
+                .author("Herbert Neil")
+                .status(false)
+                .build();
+        Book book4=Book.builder()
+                .isbn("0-4572-6998-3")
+                .title("Time Machine")
+                .author("George Wells")
+                .status(false)
+                .build();
+
         bookRepository.save(book1);
         bookRepository.save(book2);
+        bookRepository.save(book3);
+        bookRepository.save(book4);
     }
 
     @AfterEach
     void tearDown() {
-//        bookRepository.deleteAll();
+       bookRepository.deleteAll();
     }
 
 
     @Test
     void findBookByTitle() {
-        Book fetchedBook = bookRepository.findBookByTitle("I Dare");
-        System.out.println(bookRepository.findBookByTitle("I Dare"));
-        assertEquals(2, fetchedBook.getId());
-    }
-
-    @Test
-    void findBookByTitleAndSort() {
-        List<Book> actualBookList = bookRepository.findBookByTitleAndSort("Time Machine", Sort.by(Sort.Direction.ASC, "author"));
-        assertEquals(0, actualBookList.indexOf(book2));
-        assertEquals(1, actualBookList.indexOf(book1));
-    }
-
-    //not working
-    @Test
-    void findBookByArrayAndSort() {
-        List<Object[]> list = bookRepository.findBookByArrayAndSort("Kiran Bedi", JpaSort.unsafe("LENGTH(title)"));
-        System.out.println(list);
+        Book result = bookRepository.findBookByIsbn("0-2169-6768-6");
+        assertThat(result.getTitle(), is("I Dare"));
+        assertThat(result.getAuthor(), is("James Cassy"));
     }
 
     @Test
     void findBookByTitleAndAuthorIndexJpql() {
-        Book actualRetrievedBook = bookRepository.findBookByTitleAndAuthorIndexJpql("Learning Spring Boot", "James Cassy");
-        System.out.println(actualRetrievedBook);
-        assertEquals(1, actualRetrievedBook.getId());
-        assertEquals("Learning Spring Boot", actualRetrievedBook.getTitle());
-        assertEquals("James Cassy", actualRetrievedBook.getAuthor());
+        Book actualRetrievedBook = bookRepository.findBookByTitleAndAuthorIndexJpql("I Dare", "James Cassy");
+        assertThat(actualRetrievedBook, is(notNullValue()));
+        assertThat(actualRetrievedBook.getIsbn(), is("0-2169-6768-6"));
+
     }
 
     @Test
     void findBookByTitleAndAuthorIndexNative() {
-        Book actualRetrievedBook = bookRepository.findBookByTitleAndAuthorIndexNative("Development as Freedom", "Amartya Sen");
-        System.out.println(actualRetrievedBook);
-        assertEquals(3, actualRetrievedBook.getId());
-        assertEquals("Development as Freedom", actualRetrievedBook.getTitle());
-        assertEquals("Amartya Sen", actualRetrievedBook.getAuthor());
+        Book actualRetrievedBook = bookRepository.findBookByTitleAndAuthorIndexNative("I Dare", "James Cassy");
+        assertThat(actualRetrievedBook, is(notNullValue()));
+        assertThat(actualRetrievedBook.getIsbn(), is("0-2169-6768-6"));
     }
+
 
     @Test
     void findBookByTitleAndAuthorNamedJpql() {
-        Book actualRetrievedBook = bookRepository.findBookByTitleAndAuthorNamedJpql("Development as Freedom", "Amartya Sen");
-        System.out.println(actualRetrievedBook);
-        assertEquals(3, actualRetrievedBook.getId());
-        assertEquals("Development as Freedom", actualRetrievedBook.getTitle());
-        assertEquals("Amartya Sen", actualRetrievedBook.getAuthor());
+        Book actualRetrievedBook = bookRepository.findBookByTitleAndAuthorNamedJpql("I Dare", "James Cassy");
+        assertThat(actualRetrievedBook, is(notNullValue()));
+        assertThat(actualRetrievedBook.getIsbn(), is("0-2169-6768-6"));
     }
 
     @Test
     void findBookByTitleAndAuthorNamedNative() {
-        int actualRetrievedBook = bookRepository.findBookByTitleAndAuthorNamedNative("Development as Freedom", "Amartya Sen");
-        System.out.println(actualRetrievedBook);
-        assertEquals(3, actualRetrievedBook);
+        Book actualRetrievedBook = bookRepository.findBookByTitleAndAuthorNamedNative("I Dare", "James Cassy");
+        assertThat(actualRetrievedBook, is(notNullValue()));
+        assertThat(actualRetrievedBook.getIsbn(), is("0-2169-6768-6"));
+    }
+
+    @Test
+    void findBookByTitleAndSort() {
+        List<Book> actualBookList = bookRepository.findBookByTitleAndSort("Time Machine",Sort.by("author").descending());
+        assertThat(actualBookList.size(), is(2));
+        assertThat(actualBookList, containsInAnyOrder(
+                hasProperty("author", is("George Wells")),
+                hasProperty("author", is("Herbert Neil"))
+        ));
     }
 
     @Test
     void findBookByTitleSPEL() {
-        List<Book> list = bookRepository.findBookByTitleSPEL("I Dare");
-        System.out.println(list);
+        List<Book> actualBookList = bookRepository.findBookByTitleSPEL("I Dare");
+        assertThat(actualBookList.size(), is(2));
+
     }
 
     @Test
     void findAllBooksWithPagination() {
         Page<Book> allBookWithPagination = bookRepository.findAllBooksWithPagination(PageRequest.of(0, 3));
-        System.out.println(allBookWithPagination);
-        assertEquals(3, allBookWithPagination.getTotalPages());
+        assertThat(allBookWithPagination.getTotalPages(), is(2));
     }
 
     @Test
     void findAllBooksWithPaginationNative() {
         Page<Book> allBookWithPagination = bookRepository.findAllBooksWithPaginationNative(PageRequest.of(0, 3));
-        System.out.println(allBookWithPagination);
-        assertEquals(3, allBookWithPagination.getTotalPages());
+        assertThat(allBookWithPagination.getTotalPages(), is(2));
+
     }
 }

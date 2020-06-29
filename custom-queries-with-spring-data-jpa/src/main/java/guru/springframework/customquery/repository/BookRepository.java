@@ -15,16 +15,8 @@ import java.util.List;
 public interface BookRepository extends CrudRepository<Book, Integer> {
 
     //Simple query
-    @Query("SELECT b FROM Book b WHERE b.title = ?1")
-    Book findBookByTitle(String title);
-
-    // Using Sort
-    @Query("select b from Book b where b.title like ?1%")
-    List<Book> findBookByTitleAndSort(String title, Sort sort);
-
-
-    @Query("select b.id, LENGTH(b.title) as tlen from Book b where b.author like ?1%")
-    List<Object[]> findBookByArrayAndSort(String author, Sort sort);
+    @Query("SELECT b FROM Book b WHERE b.isbn = ?1")
+    Book findBookByIsbn(String isbn);
 
     // Indexed Query Parameters JPQL
     @Query("SELECT b FROM Book b WHERE b.title = ?1 and b.author = ?2")
@@ -32,7 +24,7 @@ public interface BookRepository extends CrudRepository<Book, Integer> {
 
 
     // Indexed Query Parameters Native
-    @Query(value = "SELECT * FROM Book b WHERE b.title = ?1 and b.author = ?2",
+    @Query(value = "SELECT * FROM Book  WHERE title = ?1 and author = ?2",
             nativeQuery = true)
     Book findBookByTitleAndAuthorIndexNative(String title, String authorName);
 
@@ -44,9 +36,13 @@ public interface BookRepository extends CrudRepository<Book, Integer> {
 
 
     // Named Query Parameters Native
-    @Query(value = "SELECT b.id FROM Book b WHERE b.title = :title and b.author= :author", nativeQuery = true)
-    int findBookByTitleAndAuthorNamedNative(@Param("title") String title, @Param("author") String author);
+    @Query(value = "SELECT * FROM Book WHERE title = :title and author= :author", nativeQuery = true)
+    Book findBookByTitleAndAuthorNamedNative(@Param("title") String title, @Param("author") String author);
 
+
+    // Using Sort
+    @Query("select b from Book b where b.title = ?1")
+    List<Book> findBookByTitleAndSort(String title, Sort sort);
 
     //Using SPEL Expression
 
