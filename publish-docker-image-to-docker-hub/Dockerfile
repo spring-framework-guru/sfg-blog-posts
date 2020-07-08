@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim as builder
+FROM openjdk:11 as builder
 WORKDIR application
 COPY ./pom.xml ./pom.xml
 COPY mvnw .

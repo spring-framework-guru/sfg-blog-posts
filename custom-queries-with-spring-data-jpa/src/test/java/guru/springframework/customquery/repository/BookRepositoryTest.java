@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.CoreMatchers.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -16,7 +16,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.hasProperty;
 
-@SpringBootTest
+@DataJpaTest
 class BookRepositoryTest {
     @Autowired
     private BookRepository bookRepository;
@@ -63,10 +63,9 @@ class BookRepositoryTest {
 
 
     @Test
-    void findBookByTitle() {
-        Book result = bookRepository.findBookByIsbn("0-2169-6768-6");
-        assertThat(result.getTitle(), is("I Dare"));
-        assertThat(result.getAuthor(), is("James Cassy"));
+    void findAllBooks() {
+        List<Book> result = bookRepository.findAllBooks();
+        assertThat(result, is(notNullValue()));
     }
 
     @Test
