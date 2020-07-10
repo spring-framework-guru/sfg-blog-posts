@@ -72,7 +72,6 @@ class BookRepositoryTest {
         Book actualRetrievedBook = bookRepository.findBookByTitleAndAuthorIndexJpql("I Dare", "James Cassy");
         assertThat(actualRetrievedBook, is(notNullValue()));
         assertThat(actualRetrievedBook.getIsbn(), is("0-2169-6768-6"));
-
     }
 
     @Test
@@ -111,7 +110,6 @@ class BookRepositoryTest {
     void findBookByTitleSPEL() {
         List<Book> actualBookList = bookRepository.findBookByTitleSPEL("I Dare");
         assertThat(actualBookList.size(), is(2));
-
     }
 
     @Test

@@ -26,24 +26,21 @@ public interface BookRepository extends CrudRepository<Book, Integer> {
             nativeQuery = true)
     Book findBookByTitleAndAuthorIndexNative(String title, String authorName);
 
-
     // Named Query Parameters JPQL
     @Query("SELECT b FROM Book b WHERE b.title = :title and b.author= :author")
     Book findBookByTitleAndAuthorNamedJpql(@Param("title") String title,
                                            @Param("author") String author);
 
-
     // Named Query Parameters Native
     @Query(value = "SELECT * FROM Book WHERE title = :title and author= :author", nativeQuery = true)
     Book findBookByTitleAndAuthorNamedNative(@Param("title") String title, @Param("author") String author);
-
 
     // Using Sort
     @Query("select b from Book b where b.title = ?1")
     List<Book> findBookByTitleAndSort(String title, Sort sort);
 
-    //Using SPEL Expression
 
+    //Using SPEL Expression
     @Query("select b from #{#entityName} b where b.title = ?1")
     List<Book> findBookByTitleSPEL(String title);
 
