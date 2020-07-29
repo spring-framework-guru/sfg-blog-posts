@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: development
+
+connection:
+  names:
+    - test
+    - live
+  addresses:
+    test: http://host/test
+    live: http://host/live
+---
+spring:
+  profiles: development
+merchantaccount:
+  name: Maureen Sindiso Mpofu
+  username: momoe
+  code: MCA1230
+  number: 771222279
+  currency: ZWL
+server:
+  port: 9090
+---
+spring:
+  profiles: production
+server:
+  port: 9093
+merchantaccount:
+  name: Maureen Sindiso Mpofu
+  username: momoe
+  code: MCA1234
+  number: 771222279
+  currency: ZWD
+
