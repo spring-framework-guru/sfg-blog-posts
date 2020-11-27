@@ -3,6 +3,7 @@ package com.springframework.guru.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+//product class
 @Entity
 public class Product {
 

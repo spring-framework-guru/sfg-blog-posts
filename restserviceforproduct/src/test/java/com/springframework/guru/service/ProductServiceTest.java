@@ -47,6 +47,7 @@ public class ProductServiceTest {
         productList = null;
     }
 
+    //To return list of all products
     @Test
     void givenCallToGetAllUsersThenShouldReturnListOfAllProduct() {
         productService.addProduct(product1);
@@ -60,6 +61,7 @@ public class ProductServiceTest {
         verify(productRepository, times(1)).findAll();
     }
 
+    //to return product by id number
     @Test
     void givenProductIdThenShouldReturnProductWithThatId() {
         when(productRepository.findById(anyInt())).thenReturn(Optional.of(product1));
