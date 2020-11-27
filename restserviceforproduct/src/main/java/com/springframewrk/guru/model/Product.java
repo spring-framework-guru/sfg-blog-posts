@@ -1,4 +1,4 @@
-package java.com.product.restserviceforproduct.model;
+package com.springframewrk.guru.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
