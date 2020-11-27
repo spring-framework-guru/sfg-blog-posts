@@ -92,5 +92,6 @@
         <module>spring-boot-docker-compose</module>
         <module>custom-queries-with-spring-data-jpa</module>
         <module>rabbitmqspringapp</module>
+        <module>restserviceforproduct</module>
     </modules>
 </project>
