@@ -1,4 +1,4 @@
-package com.springframewrk.guru.model;
+package com.springframework.guru.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

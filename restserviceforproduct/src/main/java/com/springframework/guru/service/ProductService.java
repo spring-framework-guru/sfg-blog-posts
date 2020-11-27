@@ -1,7 +1,7 @@
-package com.springframewrk.guru.service;
+package com.springframework.guru.service;
 
 
-import com.springframewrk.guru.model.Product;
+import com.springframework.guru.model.Product;
 import java.util.List;
 
 public interface ProductService {

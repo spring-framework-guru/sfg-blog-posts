@@ -1,4 +1,4 @@
-package com.springframewrk.guru.service;
+package com.springframework.guru.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
-import com.springframewrk.guru.model.Product;
-import com.springframewrk.guru.repository.ProductRepository;
+import com.springframework.guru.model.Product;
+import com.springframework.guru.repository.ProductRepository;
 import java.util.List;
 
 @CacheConfig(cacheNames = "product")

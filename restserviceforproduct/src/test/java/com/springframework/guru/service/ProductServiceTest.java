@@ -1,7 +1,7 @@
-package com.springframewrk.guru.service;
+package com.springframework.guru.service;
 
-import com.springframewrk.guru.model.Product;
-import com.springframewrk.guru.repository.ProductRepository;
+import com.springframework.guru.model.Product;
+import com.springframework.guru.repository.ProductRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

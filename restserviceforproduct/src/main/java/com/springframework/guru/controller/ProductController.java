@@ -1,7 +1,7 @@
-package com.springframewrk.guru.controller;
+package com.springframework.guru.controller;
 
-import com.springframewrk.guru.model.Product;
-import com.springframewrk.guru.service.ProductService;
+import com.springframework.guru.model.Product;
+import com.springframework.guru.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
