@@ -1,7 +1,7 @@
-package java.com.product.restserviceforproduct.service;
+package com.springframework.guru.service;
 
-//import com.product.restserviceforproduct.model.Product;
-//import com.product.restserviceforproduct.repository.ProductRepository;
+import com.springframework.guru.model.Product;
+import com.springframework.guru.repository.ProductRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,8 +12,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.com.product.restserviceforproduct.model.Product;
-import java.com.product.restserviceforproduct.repository.ProductRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -49,6 +47,7 @@ public class ProductServiceTest {
         productList = null;
     }
 
+    //To return list of all products
     @Test
     void givenCallToGetAllUsersThenShouldReturnListOfAllProduct() {
         productService.addProduct(product1);
@@ -62,6 +61,7 @@ public class ProductServiceTest {
         verify(productRepository, times(1)).findAll();
     }
 
+    //to return product by id number
     @Test
     void givenProductIdThenShouldReturnProductWithThatId() {
         when(productRepository.findById(anyInt())).thenReturn(Optional.of(product1));

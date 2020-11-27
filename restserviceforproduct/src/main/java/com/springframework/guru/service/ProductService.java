@@ -1,8 +1,7 @@
-package java.com.product.restserviceforproduct.service;
+package com.springframework.guru.service;
 
-//import com.product.restserviceforproduct.model.Product;
 
-import java.com.product.restserviceforproduct.model.Product;
+import com.springframework.guru.model.Product;
 import java.util.List;
 
 public interface ProductService {

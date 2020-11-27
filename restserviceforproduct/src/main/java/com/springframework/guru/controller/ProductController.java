@@ -1,14 +1,12 @@
-package java.com.product.restserviceforproduct.controller;
+package com.springframework.guru.controller;
 
-//import com.product.restserviceforproduct.model.Product;
-//import com.product.restserviceforproduct.service.ProductService;
+import com.springframework.guru.model.Product;
+import com.springframework.guru.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.com.product.restserviceforproduct.model.Product;
-import java.com.product.restserviceforproduct.service.ProductService;
 import java.util.List;
 
 @RestController

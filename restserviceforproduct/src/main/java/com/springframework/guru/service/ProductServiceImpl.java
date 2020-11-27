@@ -1,8 +1,6 @@
-package java.com.product.restserviceforproduct.service;
+package com.springframework.guru.service;
 
 
-//import com.product.restserviceforproduct.model.Product;
-//import com.product.restserviceforproduct.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -10,8 +8,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
-import java.com.product.restserviceforproduct.model.Product;
-import java.com.product.restserviceforproduct.repository.ProductRepository;
+import com.springframework.guru.model.Product;
+import com.springframework.guru.repository.ProductRepository;
 import java.util.List;
 
 @CacheConfig(cacheNames = "product")
