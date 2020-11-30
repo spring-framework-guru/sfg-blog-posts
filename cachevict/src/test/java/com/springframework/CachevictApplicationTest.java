@@ -1,13 +1,15 @@
-package com.springframeworkguru;
+package com.springframework;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProductdemoApplicationTests {
+class CachevictApplicationTest {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads(){
+
+    }
+
 
 }
