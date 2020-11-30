@@ -93,5 +93,7 @@
         <module>custom-queries-with-spring-data-jpa</module>
         <module>rabbitmqspringapp</module>
         <module>restserviceforproduct</module>
+        <module>testingspringbootrestfulservice</module>
+        <module>cachevict</module>
     </modules>
 </project>
