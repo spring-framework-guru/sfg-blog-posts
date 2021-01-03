@@ -1,4 +1,4 @@
-package springframework;
+package main.java.springframework.guru;
 
 public class Product {
     int id;
