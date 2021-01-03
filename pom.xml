@@ -97,6 +97,6 @@
         <module>restserviceforproduct</module>
         <module>testingspringbootrestfulservice</module>
         <module>cachevict</module>
-        <module>basic-authentication</module>
+
     </modules>
 </project>
