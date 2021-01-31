@@ -97,6 +97,7 @@
         <module>restserviceforproduct</module>
         <module>testingspringbootrestfulservice</module>
         <module>cachevict</module>
+        <module>argumentcaptors</module>
 
     </modules>
 </project>
