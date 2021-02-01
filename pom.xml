@@ -98,6 +98,7 @@
         <module>testingspringbootrestfulservice</module>
         <module>cachevict</module>
         <module>argumentcaptors</module>
+        <module>api-gateway-pattern</module>
 
     </modules>
 </project>
