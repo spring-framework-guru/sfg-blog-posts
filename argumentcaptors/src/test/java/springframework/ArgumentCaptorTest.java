@@ -31,10 +31,8 @@ public class ArgumentCaptorTest {
         studentService.saveStudent(student1);
 
         //verify(mock).doSomething(argument.capture());
-       // Mockito.verify(studentRepository,Mockito.times(2)).save(captor.capture());
         Mockito.verify(studentRepository).save(captor.capture());
 
-        //assertEquals("", argument.getValue().getName());
         assertEquals("Harry", captor.getValue().getName());
         assertEquals(1,captor.getValue().getId());
 
@@ -55,10 +53,7 @@ public class ArgumentCaptorTest {
 
         List<Student> studentList = captor.getAllValues();
 
-     //  for(Student captured: studentList)
-       //    assertEquals(captured.getName(),student2.getName());
-
-       assertEquals("Harry", studentList.get(0).getName());
+        assertEquals("Harry", studentList.get(0).getName());
         assertEquals("Tae", studentList.get(1).getName());
         assertEquals("Louis", studentList.get(2).getName());
     }
