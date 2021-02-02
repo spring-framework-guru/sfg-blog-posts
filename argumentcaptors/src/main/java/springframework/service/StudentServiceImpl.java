@@ -31,39 +31,6 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.save(student);
     }
 
-    @Override
-    public List<Student> getAllStudents() {
-        return (List<Student>) studentRepository.findAll();
-    }
 
-    @Override
-    public Student getStudentById(int id) {
-        return studentRepository.findById(id).get() ;
-    }
-
-    @Override
-    public Student deleteStudentById(int id) {
-        Student student = null;
-        Optional optional = studentRepository.findById(id);
-        if (optional.isPresent()) {
-            student = studentRepository.findById(id).get();
-            studentRepository.deleteById(id);
-        }
-        return student;
-    }
-
-    @Override
-    public Student updateStudent(Student student) {
-        Student updatedStudent = null;
-
-        Optional optional = studentRepository.findById(student.getId());
-        if (optional.isPresent()) {
-            Student getStudent = studentRepository.findById(student.getId()).get();
-            getStudent.setName(student.getName());
-            getStudent.setId(student.getId());
-            updatedStudent = saveStudent(getStudent);
-        }
-        return updatedStudent;
-    }
 
 }
