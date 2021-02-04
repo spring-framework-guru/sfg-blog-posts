@@ -67,7 +67,7 @@
     <modules>
         <module>example-post</module>
         <module>java-list-operations</module>
-        <module>basic-authentication</module>
+        <module>basicauthentication</module>
         <module>resourceloaderdemo</module>
         <module>autowiringdemo</module>
         <module>springawareinterfaces</module>

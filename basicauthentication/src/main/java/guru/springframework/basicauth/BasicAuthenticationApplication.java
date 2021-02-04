@@ -1,4 +1,4 @@
-package springframework.guru.basicauthentication;
+package guru.springframework.basicauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
