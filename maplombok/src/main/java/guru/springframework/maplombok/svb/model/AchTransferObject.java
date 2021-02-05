@@ -2,7 +2,6 @@ package guru.springframework.maplombok.svb.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,10 +15,7 @@ import java.time.LocalDate;
  * See <a href="https://www.svb.com/developers/ach">SVB Documentation</a> for additional information.
  *
  * *** Property level comments are from SVB docs
- *
- * Created by jt on 1/28/21.
  */
-@JsonRootName("data")
 @Getter
 @Setter
 @Builder
@@ -69,7 +65,7 @@ public class AchTransferObject {
      * Date when the transfer should take place. Defaults to tomorrow’s date.
      */
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private LocalDate effectiveDate; //todo date format? per docs - "2016-09-20"
+    private LocalDate effectiveDate;
 
     /**
      * Uniquely identifies each ACH transfer object.
@@ -85,31 +81,31 @@ public class AchTransferObject {
     /**
      * Optional metadata to associate with the API resource.
      */
-    private Object metadata; //todo determine what this is...
+    private Object metadata;
 
     /**
      * Bank account number that is receiving the ACH transfer.
      */
-    @NotNull //todo - not required if counter party id is provided, assuming we are not using this
+    @NotNull
     private String receiverAccountNumber;
 
     /**
      * Type of bank account that is receiving the ACH transfer.
      */
-    @Builder.Default //todo - account type not carried in velo, how to determine?
-    @NotNull //todo - not required if counter party id is provided, assuming we are not using this
+    @Builder.Default
+    @NotNull
     private AchAccountType receiverAccountType = AchAccountType.CHECKING;
 
     /**
      * Name of the holder of the receiving account.
      */
-    @NotNull //todo - not required if counter party id is provided, assuming we are not using this
+    @NotNull
     private String receiverName;
 
     /**
      * ABA routing number associated with the receiver_account_number.
      */
-    @NotNull //todo - not required if counter party id is provided, assuming we are not using this
+    @NotNull
     private String receiverRoutingNumber;
 
     /**
@@ -119,7 +115,7 @@ public class AchTransferObject {
      * For corrections, this will also contain the corrected value.
      */
     @JsonProperty("return") //return is Java key word
-    private String returnValue; //todo - returns an object, need to review type here
+    private String returnValue;
 
     /**
      * SEC code to be used for the ACH transfer. Consult your banker if you’re not sure which

@@ -12,9 +12,6 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-/**
- * Created by jt on 2/5/21.
- */
 @Entity
 @Data
 @Builder
