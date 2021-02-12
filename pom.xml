@@ -67,13 +67,14 @@
     <modules>
         <module>example-post</module>
         <module>java-list-operations</module>
-        <module>basic-authentication</module>
+        <module>basicauthentication</module>
         <module>resourceloaderdemo</module>
         <module>autowiringdemo</module>
         <module>springawareinterfaces</module>
         <module>springboot-graphql-app</module>
         <module>springdependencyinjection</module>
         <module>jdbc-template</module>
+        <module>maplombok</module>
         <module>spring-factory-method</module>
         <module>resttemplate</module>
         <module>multiple-data-sources</module>

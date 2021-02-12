@@ -36,3 +36,4 @@ The blog posts for the examples in this repo are:
 - [Run Spring Boot on Docker](https://springframework.guru/run-spring-boot-on-docker/)
 - [Manage Docker Containers with Docker Compose](https://springframework.guru/manage-docker-containers-with-docker-compose/)
 - [Feign REST Client for Spring Application](https://springframework.guru/feign-rest-client-for-spring-application/)
+- [Using MapStruct with Project Lombok](https://springframework.guru/using-mapstruct-with-project-lombok/)
