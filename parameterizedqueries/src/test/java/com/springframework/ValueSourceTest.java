@@ -71,12 +71,4 @@ public class ValueSourceTest {
         assertEquals(sum, a + b);
     }
 
-//    @DisplayName("Should calculate the correct sum from csv file")
-//    @ParameterizedTest(name = "{index} => a={0}, b={1}, sum={2}")
-//    @CsvFileSource(resources = "/test-data.csv")
-//    void sum(int a, int b, int sum) {
-//        assertEquals(sum, a + b);
-//    }
-
-
 }
