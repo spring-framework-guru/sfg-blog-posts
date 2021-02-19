@@ -1,0 +1,15 @@
+==== Sample Request
+include::{snippets}/users/getUserByName/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/users/getUserByName/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/users/getUserByName/curl-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/users/getUserByName/path-parameters.adoc[]
+
+
+==== Response Fields
+include::{snippets}/users/getUserByName/response-fields.adoc[]

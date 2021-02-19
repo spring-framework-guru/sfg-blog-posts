@@ -101,6 +101,7 @@
         <module>argumentcaptors</module>
         <module>api-gateway-pattern</module>
         <module>parameterizedqueries</module>
+        <module>spring-rest-docs</module>
 
     </modules>
 </project>
