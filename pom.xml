@@ -102,6 +102,7 @@
         <module>api-gateway-pattern</module>
         <module>parameterizedqueries</module>
         <module>spring-rest-docs</module>
+        <module>stored-procedure-call</module>
 
     </modules>
 </project>
