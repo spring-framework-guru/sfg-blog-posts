@@ -1,15 +1,20 @@
-package com.springframework;
+package com.springframeworkguru.parameterizedtest;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
 import java.util.EnumSet;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.EnumSource.Mode.EXCLUDE;
 
-public class ValueSourceTest {
+public class DemoParameterizedTest {
+
+    DemoParameterized demoParameterized;
+
+
 
     @ParameterizedTest
     @DisplayName("checks if the given string values ends with the alphabet r")
@@ -69,6 +74,24 @@ public class ValueSourceTest {
     })
     void sum(int a, int b, int sum) {
         assertEquals(sum, a + b);
+    }
+
+
+    @ParameterizedTest
+   // @MethodSource("com.springframeworkguru.parameterizedtest.TestParameter#providedStringsIsPalindrome")
+    @MethodSource("providedStringsIsPalindrome")
+    void isPlindromeString(String input, boolean expected) {
+        demoParameterized = new DemoParameterized();
+        assertEquals(expected, demoParameterized.isPalindrome(input));
+    }
+
+    private static Stream<Arguments> providedStringsIsPalindrome() {
+        return Stream.of(
+                Arguments.of("word", false),
+                Arguments.of("mom", true),
+                Arguments.of("level", true),
+                Arguments.of("pass", false)
+        );
     }
 
 }
