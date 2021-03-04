@@ -23,7 +23,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Parameterized Tests -->
+        <!--&lt;!&ndash; Parameterized Tests &ndash;&gt;-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
