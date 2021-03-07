@@ -27,6 +27,4 @@ public interface BlogRepository extends JpaRepository<Blog,Integer> {
     @Procedure(name = "Blog.getTotalBlogsByTitleEntiy")
     int getTotalBlogsByTitleEntiy(@Param("model_in") String model);
 
-
-
 }

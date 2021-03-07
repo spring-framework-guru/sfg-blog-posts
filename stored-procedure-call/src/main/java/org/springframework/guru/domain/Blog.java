@@ -3,9 +3,9 @@ package org.springframework.guru.domain;
 import javax.persistence.*;
 
 @Entity
-//@NamedStoredProcedureQuery(name = "Blog.getTotalBlogsByTitlelEntity", procedureName = "GET_TOTAL_BLOGS_BY_TITLE", parameters = {
-//        @StoredProcedureParameter(mode = ParameterMode.IN, name = "title_in", type = String.class),
-//        @StoredProcedureParameter(mode = ParameterMode.OUT, name = "count_out", type = Integer.class) })
+@NamedStoredProcedureQuery(name = "get_blog_details", procedureName = "get_blog_details", resultClasses = {
+        Blog.class }, parameters = {
+        @StoredProcedureParameter(name = "title", mode = ParameterMode.IN, type = String.class) })
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +17,14 @@ public class Blog {
 
     @Column
     private Integer yearOfPost;
+
+    public Blog() {
+    }
+
+    public Blog(String title, Integer yearOfPost) {
+        this.title = title;
+        this.yearOfPost = yearOfPost;
+    }
 
     public long getBlogId() {
         return blogId;
