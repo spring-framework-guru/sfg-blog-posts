@@ -1,0 +1,10 @@
+insert into Blog values(100,'Indian Struggle for Freedom');
+insert into Blog values(110,'Gandhian Era');
+insert into Blog values(120,'Gandhi Irwin Pact');
+insert into Blog values(130,'Poona Pact');
+insert into Blog values(210,'The Indian Constitution');
+insert into Blog values(290,'Minto Morley Reforms');
+insert into Blog values(310,'World War');
+insert into Blog values(890,'The Preamble');
+insert into Blog values(780,'Articles');
+insert into Blog values(590,'Fundamental Duties');

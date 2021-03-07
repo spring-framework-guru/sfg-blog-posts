@@ -103,6 +103,7 @@
         <module>parameterizedqueries</module>
         <module>spring-rest-docs</module>
         <module>stored-procedure-call</module>
+        <module>spring-boot-pagination</module>
 
     </modules>
 </project>
