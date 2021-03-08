@@ -1,11 +1,8 @@
 package org.springframework.guru.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.guru.domain.Blog;
 import org.springframework.guru.repository.BlogRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class BlogService {
