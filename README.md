@@ -41,3 +41,4 @@ The blog posts for the examples in this repo are:
 - [Spring REST Docs]()
 - [Calling Stored Procedure from Spring Data JPA Repository]()
 - [Spring Boot Pagination]()
+- [Convert OffsetDateTime to SQLTimeStamp]()
