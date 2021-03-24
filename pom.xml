@@ -104,6 +104,7 @@
         <module>spring-rest-docs</module>
         <module>stored-procedure-call</module>
         <module>spring-boot-pagination</module>
+        <module>error-handling-in-spring</module>
 
     </modules>
 </project>
