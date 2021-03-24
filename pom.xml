@@ -105,6 +105,7 @@
         <module>stored-procedure-call</module>
         <module>spring-boot-pagination</module>
         <module>error-handling-in-spring</module>
+        <module>spring-state-machine</module>
 
     </modules>
 </project>

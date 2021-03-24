@@ -43,3 +43,4 @@ The blog posts for the examples in this repo are:
 - [Spring Boot Pagination]()
 - [Convert OffsetDateTime to SQLTimeStamp]()
 - [Error Handling in Spring REST]()
+- [Spring State Machine]()
