@@ -44,3 +44,4 @@ The blog posts for the examples in this repo are:
 - [Convert OffsetDateTime to SQLTimeStamp]()
 - [Error Handling in Spring REST]()
 - [Spring State Machine]()
+- [Java Bean Validation]()

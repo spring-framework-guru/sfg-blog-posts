@@ -106,6 +106,7 @@
         <module>spring-boot-pagination</module>
         <module>error-handling-in-spring</module>
         <module>spring-state-machine</module>
+        <module>java-bean-validation</module>
 
     </modules>
 </project>
