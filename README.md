@@ -45,3 +45,4 @@ The blog posts for the examples in this repo are:
 - [Error Handling in Spring REST]()
 - [Spring State Machine]()
 - [Java Bean Validation]()
+- [Stored Procedures with Spring Boot]()
