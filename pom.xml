@@ -107,6 +107,7 @@
         <module>error-handling-in-spring</module>
         <module>spring-state-machine</module>
         <module>java-bean-validation</module>
+        <module>stored-procedure-with-spring-boot</module>
 
     </modules>
 </project>
