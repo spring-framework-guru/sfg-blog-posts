@@ -108,6 +108,7 @@
         <module>spring-state-machine</module>
         <module>java-bean-validation</module>
         <module>stored-procedure-with-spring-boot</module>
+        <module>spring-core-concepts</module>
 
     </modules>
 </project>

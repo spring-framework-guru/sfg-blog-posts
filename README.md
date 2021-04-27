@@ -46,3 +46,4 @@ The blog posts for the examples in this repo are:
 - [Spring State Machine]()
 - [Java Bean Validation]()
 - [Stored Procedures with Spring Boot]()
+- [BeanFactory vs ApplicationContext]()

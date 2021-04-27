@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+    <!-- Setter injection-->
+    <bean id="book" class="org.springframework.guru.domain.Book">
+        <property name="bookPublisher">
+            <bean class="org.springframework.guru.domain.BookPublisher">
+                <property name="publisherId" value ="101"/>
+                <property name="firstName" value="Joseph"/>
+                <property name="lastName" value="Ray"/>
+            </bean>
+        </property>
+    </bean>
+</beans>
