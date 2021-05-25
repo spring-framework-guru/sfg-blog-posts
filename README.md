@@ -47,3 +47,4 @@ The blog posts for the examples in this repo are:
 - [Java Bean Validation]()
 - [Stored Procedures with Spring Boot]()
 - [BeanFactory vs ApplicationContext]()
+- [Multi Module Spring Boot Project]()
