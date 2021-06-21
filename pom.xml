@@ -110,5 +110,6 @@
         <module>stored-procedure-with-spring-boot</module>
         <module>spring-core-concepts</module>
         <module>multimodule-spring-boot-project</module>
+        <module>one-to-one-association</module>
     </modules>
 </project>
