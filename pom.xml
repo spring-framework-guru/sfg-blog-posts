@@ -111,5 +111,6 @@
         <module>spring-core-concepts</module>
         <module>multimodule-spring-boot-project</module>
         <module>one-to-one-association</module>
+        <module>one-to-many-association</module>
     </modules>
 </project>
