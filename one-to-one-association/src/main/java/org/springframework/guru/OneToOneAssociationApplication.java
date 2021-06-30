@@ -22,14 +22,6 @@ public class OneToOneAssociationApplication {
         return args -> {
 
 
-            Person person = new Person("Martin", "martin.page@example.com", "1234abcd");
-
-            Address address = new Address("Lake victoria", "Berlin", "Berlin",
-                    "95781", "DE");
-
-            address.setPerson(person);
-            person.setAddress(address);
-            personRepository.save(person);
         };
     }
 }
