@@ -50,3 +50,4 @@ The blog posts for the examples in this repo are:
 - [Multi Module Spring Boot Project]()
 - [One to One Association]()
 - [One to Many Association]()
+- [Actuator in Spring Boot]()

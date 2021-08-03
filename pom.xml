@@ -112,5 +112,6 @@
         <module>multimodule-spring-boot-project</module>
         <module>one-to-one-association</module>
         <module>one-to-many-association</module>
+        <module>spring-actuator-demo</module>
     </modules>
 </project>
