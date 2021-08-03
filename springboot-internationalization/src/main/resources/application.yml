@@ -1,0 +1,7 @@
+placeholder:
+  greetings: welcome.message
+server:
+  port: 8080
+spring:
+  application:
+    name: internationalization-with-springboot
