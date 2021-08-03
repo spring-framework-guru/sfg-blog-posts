@@ -51,3 +51,5 @@ The blog posts for the examples in this repo are:
 - [One to One Association]()
 - [One to Many Association]()
 - [Actuator in Spring Boot]()
+- [Spring Boot CLI]()
+- [Spring Boot Internationalization]()

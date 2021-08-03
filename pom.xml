@@ -113,5 +113,6 @@
         <module>one-to-one-association</module>
         <module>one-to-many-association</module>
         <module>spring-actuator-demo</module>
+        <module>springboot-internationalization</module>
     </modules>
 </project>
