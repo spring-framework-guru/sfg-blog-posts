@@ -114,5 +114,6 @@
         <module>one-to-many-association</module>
         <module>spring-actuator-demo</module>
         <module>springboot-internationalization</module>
+        <module>spring-retry</module>
     </modules>
 </project>

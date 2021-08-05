@@ -53,3 +53,4 @@ The blog posts for the examples in this repo are:
 - [Actuator in Spring Boot]()
 - [Spring Boot CLI]()
 - [Spring Boot Internationalization]()
+- [Spring Retry]()
