@@ -1,7 +1,6 @@
 package org.springframework.guru.domain;
 
 import lombok.*;
-
 import javax.persistence.*;
 
 @Getter
@@ -20,8 +19,4 @@ public class Person {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
-
-
-
-
 }
