@@ -115,5 +115,6 @@
         <module>spring-actuator-demo</module>
         <module>springboot-internationalization</module>
         <module>spring-retry</module>
+        <module>scheduling-demo</module>
     </modules>
 </project>
