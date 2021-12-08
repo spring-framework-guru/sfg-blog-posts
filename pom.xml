@@ -116,5 +116,6 @@
         <module>springboot-internationalization</module>
         <module>spring-retry</module>
         <module>scheduling-demo</module>
+        <module>springboot-kafka-demo</module>
     </modules>
 </project>
