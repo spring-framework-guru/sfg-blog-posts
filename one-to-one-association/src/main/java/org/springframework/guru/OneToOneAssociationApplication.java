@@ -20,8 +20,6 @@ public class OneToOneAssociationApplication {
     public CommandLineRunner mappingDemo(PersonRepository personRepository,
                                          AddressRepository addressRepository) {
         return args -> {
-
-
         };
     }
 }

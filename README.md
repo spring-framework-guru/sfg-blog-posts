@@ -54,3 +54,6 @@ The blog posts for the examples in this repo are:
 - [Spring Boot CLI]()
 - [Spring Boot Internationalization]()
 - [Spring Retry]()
+- [EnumSet in Java]()
+- [Scheduling in Spring Boot]()
+- [Spring Boot Kafka]()
