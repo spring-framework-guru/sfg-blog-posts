@@ -57,3 +57,4 @@ The blog posts for the examples in this repo are:
 - [EnumSet in Java]()
 - [Scheduling in Spring Boot]()
 - [Spring Boot Kafka]()
+- [Eureka Service Registry]()

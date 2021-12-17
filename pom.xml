@@ -117,5 +117,8 @@
         <module>spring-retry</module>
         <module>scheduling-demo</module>
         <module>springboot-kafka-demo</module>
+        <module>employee-service</module>
+        <module>spring-eureka-server</module>
+
     </modules>
 </project>
