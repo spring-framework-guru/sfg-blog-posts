@@ -117,7 +117,7 @@
         <module>spring-retry</module>
         <module>scheduling-demo</module>
         <module>springboot-kafka-demo</module>
-        
+       <module>bootstrapping-data-in-springboot</module>
 
     </modules>
 </project>
