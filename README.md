@@ -58,3 +58,4 @@ The blog posts for the examples in this repo are:
 - [Scheduling in Spring Boot]()
 - [Spring Boot Kafka]()
 - [Bootstrapping Data in Spring Boot]()
+- [Using Eureka Service Registry]()
