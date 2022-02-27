@@ -118,6 +118,7 @@
         <module>scheduling-demo</module>
         <module>springboot-kafka-demo</module>
        <module>bootstrapping-data-in-springboot</module>
+        <module>spring-filter</module>
 
     </modules>
 </project>
