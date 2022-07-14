@@ -1,48 +1,11 @@
 # HikariCP-SpringBoot2-MySQL Demo
 
-Step 1: run the EmployeeCrudDemoApplication file
+Step 1: Ensure MySQL is running on system
 
-step 2: verify sql server is running on system
+Step 2: Update MySQL data source credentials in application.properties
 
-step 3: use below APIs to check the response in postman
+Step 3: Run the EmployeeCrudDemoApplication file
 
-****insert a record to employee table (method = POST)***
+Step 4: Examine the console log for Hikari CP settings
 
--->http://localhost:8080/api/employees
-
--- body --
-
-`{
-    "id": 1,
-    "firstName": "Sam",
-    "lastName": "Presto",
-    "email": "sam.p@gmail.com"
-}`
-
-
-
-*** get all employees data***
-
--->http://localhost:8080/api/employees
-
-***get paticular employee data by ID***
-
--->http://localhost:8080/api/employees/1
-
-*** update data for any employee  (method = PUT)***
-
--->http://localhost:8080/api/employees
-
--- body --
-
-`{
-	"id"		:1,
-    "firstName": "Sam",
-    "lastName": "Presto",
-    "email": "sam.p@gmail.com"
-}`
-
-*** delete any employee based on ID (method = DELETE) ***
-
---->http://localhost:8080/api/employees/1
-    
+Step 5: Access Actuator metrics for Hikari CP
