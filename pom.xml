@@ -121,7 +121,5 @@
         <module>spring-filter</module>
         <module>eureka-service-registry</module>
         <module>db-migration-flyway</module>
-kari
-
     </modules>
 </project>
