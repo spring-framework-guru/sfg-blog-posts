@@ -120,6 +120,7 @@
        <module>bootstrapping-data-in-springboot</module>
         <module>spring-filter</module>
         <module>eureka-service-registry</module>
+        <module>db-migration-flyway</module>
 
     </modules>
 </project>
