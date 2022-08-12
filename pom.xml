@@ -121,6 +121,6 @@
         <module>spring-filter</module>
         <module>eureka-service-registry</module>
         <module>db-migration-flyway</module>
-        <module>jwtauth</module>
+
     </modules>
 </project>
