@@ -51,14 +51,12 @@
     <organization>
         <name>Spring Framework Guru</name>
     </organization>
-
     <developers>
         <developer>
             <name>John Thompson</name>
             <organization>Spring Framework Guru</organization>
         </developer>
     </developers>
-
     <issueManagement>
         <url>https://github.com/sfg-beer-works/sfg-brewery/issues</url>
         <system>GitHub</system>
