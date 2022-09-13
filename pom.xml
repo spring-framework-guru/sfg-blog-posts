@@ -121,6 +121,8 @@
         <module>spring-filter</module>
         <module>eureka-service-registry</module>
         <module>db-migration-flyway</module>
+        <module>AuthenticatorService</module>
+        <module>BlogService</module>
 
     </modules>
 </project>
