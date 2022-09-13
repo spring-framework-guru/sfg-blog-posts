@@ -65,7 +65,7 @@
     </issueManagement>
 
     <modules>
-        <module>example-post</module>
+
         <module>java-list-operations</module>
         <module>basicauthentication</module>
         <module>resourceloaderdemo</module>
