@@ -7,7 +7,8 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:11.0.3-jdk-stretch
+      #- image: circleci/openjdk:11.0.3-jdk-stretch
+      - image: circleci/openjdk:11-buster-node-browsers-legacy
         environment:
           APP_DATASOURCE_MEMBER_PASSWORD: ''
           APP_DATASOURCE_CARDHOLDER_PASSWORD: ''
