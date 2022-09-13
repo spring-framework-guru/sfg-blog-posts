@@ -65,7 +65,7 @@
     </issueManagement>
 
     <modules>
-        <module>example-post</module>
+
         <module>java-list-operations</module>
         <module>basicauthentication</module>
         <module>resourceloaderdemo</module>
@@ -121,6 +121,8 @@
         <module>spring-filter</module>
         <module>eureka-service-registry</module>
         <module>db-migration-flyway</module>
+        <module>AuthenticatorService</module>
+        <module>BlogService</module>
 
     </modules>
 </project>
