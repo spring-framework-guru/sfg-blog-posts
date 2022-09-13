@@ -123,6 +123,5 @@
         <module>db-migration-flyway</module>
         <module>AuthenticatorService</module>
         <module>BlogService</module>
-
     </modules>
 </project>
