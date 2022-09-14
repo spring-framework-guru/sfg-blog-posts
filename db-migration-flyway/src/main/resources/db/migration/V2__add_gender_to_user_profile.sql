@@ -1,1 +1,0 @@
-alter table user_profile ADD gender VARCHAR(25);

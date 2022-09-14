@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: hello-service
-  cloud:
-    consul:
-      host: 172.17.0.1
-      discovery:
-        prefer-ip-address: true
