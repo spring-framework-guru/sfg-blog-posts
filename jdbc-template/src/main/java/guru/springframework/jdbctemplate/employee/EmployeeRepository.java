@@ -76,7 +76,7 @@ public class EmployeeRepository {
    * @param employee the employee to be created
    * @return the id of the created employee.
    */
-  public long saveAndReturnId(Employee employee) {
+  public Long saveAndReturnId(Employee employee) {
     String sqlQuery = "insert into employees(first_name, last_name, yearly_income) " +
                       "values (?, ?, ?)";
 
