@@ -92,6 +92,8 @@ public class EmployeeRepository {
 
     if (keyHolder.getKey() != null) {
       return keyHolder.getKey().longValue();
+    }else {
+      return  null;
     }
   }
 
