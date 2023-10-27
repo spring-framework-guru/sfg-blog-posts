@@ -90,7 +90,9 @@ public class EmployeeRepository {
       return stmt;
     }, keyHolder);
 
-    return keyHolder.getKey().longValue();
+    if (keyHolder.getKey() != null) {
+      return keyHolder.getKey().longValue();
+    }
   }
 
 
