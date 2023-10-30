@@ -9,7 +9,7 @@ public interface ProductService {
 
      Product addProduct(Product product) throws ProductAlreadyExistsException;
     List<Product> getAllProducts();
-     Product getProductByid(int id);
+     Product getProductById(int id);
     Product deleteProductById(int id);
 
 

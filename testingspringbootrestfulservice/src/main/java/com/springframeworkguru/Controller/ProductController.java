@@ -33,7 +33,7 @@ public class ProductController {
 
     @GetMapping("product/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable("id") int id){
-        return new ResponseEntity<>(productService.getProductByid(id),HttpStatus.OK);
+        return new ResponseEntity<>(productService.getProductById(id),HttpStatus.OK);
     }
 
     @DeleteMapping("product/{id}")
